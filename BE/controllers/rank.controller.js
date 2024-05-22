@@ -50,19 +50,18 @@ exports.getUserRank = async (req, res) => {
     }
 };
 
-// Function to get the top users ranked by upvotes for a specific subject
 exports.getRankBySubject = async (req, res) => {
     try {
         const { subject_id } = req.params;
         const query = `
             SELECT 
-                ROW_NUMBER() OVER (ORDER BY r.upvote DESC) AS rank, 
+                ROW_NUMBER() OVER (ORDER BY (r.upvote - r.downvote) DESC) AS rank, 
                 u.username, 
-                r.upvote 
+                (r.upvote - r.downvote) AS score
             FROM rank r 
             JOIN users u ON r.user_id = u.user_id 
             WHERE r.subject_id = $1 
-            ORDER BY r.upvote DESC 
+            ORDER BY score DESC 
             LIMIT 100
         `;
         const { rows: rank } = await neonPool.query(query, [subject_id]);

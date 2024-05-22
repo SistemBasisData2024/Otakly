@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const { user } = useUser(); // Assuming `user` is either an object or null
+  const { user } = useUser(); 
   const navigate = useNavigate();
 
   return (
@@ -15,7 +15,7 @@ const Navbar = () => {
           className="font-semibold text-xl tracking-tight"
           onClick={() => navigate("/home")}
         >
-          Big Brain
+          Otakly
         </span>
       </div>
 

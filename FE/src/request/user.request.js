@@ -32,11 +32,50 @@ export const register = async (username, password, email) => {
     }
 };
 
-export const updateUser = async (user_id, username, password, email, profile_picture) => {
+export const updateUserUsername = async (user_id, username) => {
     try {
       const response = await axios.put(
-        `${BASE_URL}/user/updateUser/${user_id}`,
-        { username, password, email, profile_picture },
+        `${BASE_URL}/user/updateUserUsername/${user_id}`,
+        { username },
+        { headers: { "Content-Type": "application/json" } }
+      );
+      return baseApiResponse(response.data.message, response.data.payload);
+    } catch (error) {
+        return baseApiResponse(error.response ? error.response.data.message : "An error accured", error.response ? error.response.data : null);
+    }
+}
+
+export const updateUserPassword = async (user_id, password) => {
+    try {
+      const response = await axios.put(
+        `${BASE_URL}/user/updateUserPassword/${user_id}`,
+        { password },
+        { headers: { "Content-Type": "application/json" } }
+      );
+      return baseApiResponse(response.data.message, response.data.payload);
+    } catch (error) {
+        return baseApiResponse(error.response ? error.response.data.message : "An error accured", error.response ? error.response.data : null);
+    }
+}
+
+export const updateUserEmail = async (user_id, email) => {
+    try {
+      const response = await axios.put(
+        `${BASE_URL}/user/updateUserEmail/${user_id}`,
+        { email },
+        { headers: { "Content-Type": "application/json" } }
+      );
+      return baseApiResponse(response.data.message, response.data.payload);
+    } catch (error) {
+        return baseApiResponse(error.response ? error.response.data.message : "An error accured", error.response ? error.response.data : null);
+    }
+}
+
+export const updateUserProfilePicture = async (user_id, profile_picture) => {
+    try {
+      const response = await axios.put(
+        `${BASE_URL}/user/updateUserProfilePicture/${user_id}`,
+        { profile_picture },
         { headers: { "Content-Type": "application/json" } }
       );
       return baseApiResponse(response.data.message, response.data.payload);

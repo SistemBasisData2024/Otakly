@@ -22,8 +22,8 @@ const RegisterPage = () => {
                 setUser(response.payload);
                 navigate("/home");
             }
-        } catch (error) {
-            console.error(error);
+        } catch (err) {
+            console.error(err);
         }
     }
     return (

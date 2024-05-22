@@ -20,7 +20,6 @@ const LoginPage = () => {
             if (response.payload){
                 setError(response.message);
             }
-            setUser(response.payload);
         } catch (error) {
             console.error(error);
         }

@@ -1,0 +1,251 @@
+{"duration":267,"level":"info","message":"Executed query","rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T10:24:50.945Z"}
+{"duration":73,"level":"info","message":"Executed query","rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T10:24:51.270Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:24:51.315Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:24:51.345Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:25:04.410Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:25:04.441Z"}
+{"duration":67,"level":"info","message":"Executed query","rows":0,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T10:25:14.793Z"}
+{"duration":70,"level":"info","message":"Executed query","rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T10:25:23.494Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:25:23.788Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:25:23.816Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:27:06.294Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:27:18.791Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:27:21.249Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:27:23.940Z"}
+{"duration":40,"level":"info","message":"Executed query","params":["0a0108ee-ff94-4269-9dfd-6bef355f3814"],"rows":1,"text":"DELETE FROM users WHERE user_id = $1 RETURNING *","timestamp":"2024-05-22T10:27:34.657Z"}
+{"duration":355,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:28:06.153Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:28:06.181Z"}
+{"duration":215,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:28:54.688Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T10:28:54.716Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:44:16.630Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:45:22.523Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:45:28.936Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:46:12.967Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:46:35.552Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:48:34.462Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:48:45.584Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:48:47.236Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:48:52.285Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:48:55.868Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T10:48:57.790Z"}
+{"duration":902,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T11:42:53.216Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T11:42:54.475Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T11:42:56.827Z"}
+{"duration":219,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T11:45:24.099Z"}
+{"duration":32,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T11:45:24.133Z"}
+{"duration":823,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:36:51.541Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:37:14.112Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:37:39.973Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:37:40.001Z"}
+{"duration":293,"level":"info","message":"Executed query","params":["user"],"rows":0,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:41:40.658Z"}
+{"duration":23,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T12:41:55.968Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["user","$2b$12$J949A9r.J0Q9C8uuChz0/e72qBHZH1DWu8YpysL4HQNuRgz6CbYRO","email@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T12:41:56.321Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:41:56.359Z"}
+{"duration":22,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:41:56.384Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["","email@email.com","fd0f153b-3760-491a-969c-fba639bdf057"],"rows":0,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T12:42:15.499Z"}
+{"duration":72,"level":"info","message":"Executed query","params":["","$2b$12$QU4FB8Bjf7tlNxjq3GpcuOWuYF7t/0jhIGtAXRGtjIiWgX4kDet8.","email@email.com","","fd0f153b-3760-491a-969c-fba639bdf057"],"rows":1,"text":"UPDATE users SET username = $1, password = $2, email = $3, profile_picture = $4 WHERE user_id = $5 RETURNING *","timestamp":"2024-05-22T12:42:15.790Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["","email@email.com","fd0f153b-3760-491a-969c-fba639bdf057"],"rows":0,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T12:42:17.812Z"}
+{"duration":75,"level":"info","message":"Executed query","params":["","$2b$12$ropxZoKDawaLXTePTKIaju17QeGp9TEgphtTJJSL9ABP6TwjPfQfO","email@email.com","","fd0f153b-3760-491a-969c-fba639bdf057"],"rows":1,"text":"UPDATE users SET username = $1, password = $2, email = $3, profile_picture = $4 WHERE user_id = $5 RETURNING *","timestamp":"2024-05-22T12:42:18.116Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["","email@email.com","fd0f153b-3760-491a-969c-fba639bdf057"],"rows":0,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T12:42:19.584Z"}
+{"duration":63,"level":"info","message":"Executed query","params":["","$2b$12$/7c/vfiJpYTNI/hg3oYYceHatipHavyl4/5npvxfpXzRF8dt77yka","email@email.com","","fd0f153b-3760-491a-969c-fba639bdf057"],"rows":1,"text":"UPDATE users SET username = $1, password = $2, email = $3, profile_picture = $4 WHERE user_id = $5 RETURNING *","timestamp":"2024-05-22T12:42:19.884Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T12:43:17.100Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T12:43:28.667Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T12:43:41.041Z"}
+{"duration":199,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:45:49.845Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:45:49.871Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:45:52.234Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:45:52.259Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:45:53.619Z"}
+{"duration":22,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:45:53.644Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T12:46:10.605Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["user","$2b$12$eIDCX4QMrZlrkBDa18G8yOg6DFLMbBPJc7OOjzubfHHK0gCuKA1iq","email@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T12:46:10.882Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:46:10.923Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:46:10.947Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T12:52:30.039Z"}
+{"duration":61,"level":"info","message":"Executed query","params":["user","email@email.com","7738da23-909b-4f63-b768-17e37b5a4279"],"rows":0,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T12:52:30.406Z"}
+{"duration":74,"level":"info","message":"Executed query","params":["user","$2b$12$TYHUy..d.UpKOu3uaTO9B.UjO87zGwsmIPcmPgOTQxGZ4uQgiceXu","email@email.com","","7738da23-909b-4f63-b768-17e37b5a4279"],"rows":1,"text":"UPDATE users SET username = $1, password = $2, email = $3, profile_picture = $4 WHERE user_id = $5 RETURNING *","timestamp":"2024-05-22T12:52:30.691Z"}
+{"duration":255,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:53:47.666Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:54:15.691Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:54:36.243Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:54:37.620Z"}
+{"duration":239,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:55:21.083Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:55:22.890Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:55:29.037Z"}
+{"duration":73,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:55:29.848Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:55:30.028Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:55:30.218Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:55:30.465Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:55:56.728Z"}
+{"duration":246,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":1,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T12:56:48.365Z"}
+{"duration":64,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":1,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T12:56:52.691Z"}
+{"duration":228,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T12:57:28.972Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["user","$2b$12$5jWU591nS/aT9yjoCVgM7.00JpYvAiZG7YZ97zOgQ98f1CeTMOUXm","email@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T12:57:29.252Z"}
+{"duration":30,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:57:29.302Z"}
+{"duration":22,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:57:29.327Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:57:34.355Z"}
+{"duration":32,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:57:34.389Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:57:48.003Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:57:48.253Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:57:48.281Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:57:54.301Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:57:54.327Z"}
+{"duration":64,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:58:03.844Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:58:05.095Z"}
+{"duration":417,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T12:58:46.218Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:58:46.481Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:58:46.507Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["9e8d4e41-5bb1-406a-b177-f9f2ea4fea3c"],"rows":1,"text":"DELETE FROM users WHERE user_id = $1 RETURNING *","timestamp":"2024-05-22T12:58:50.038Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T12:59:05.758Z"}
+{"duration":78,"level":"info","message":"Executed query","params":["user","$2b$12$xgHbbzYK52vwOxdgpg7f2ebwTF8o0LYFYbcyyq86q9T4CITINNIN2","email@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T12:59:06.055Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:59:06.094Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T12:59:06.120Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user","email@email.com","72aac5cb-2124-400b-99b3-609d71abd48e"],"rows":0,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T12:59:08.600Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["user","$2b$12$rxwCWs2GVrM7onhlSmQHp.LmNHiqETHZi2oEK.qdmY7QJuRtdnol6","email@email.com","","72aac5cb-2124-400b-99b3-609d71abd48e"],"rows":1,"text":"UPDATE users SET username = $1, password = $2, email = $3, profile_picture = $4 WHERE user_id = $5 RETURNING *","timestamp":"2024-05-22T12:59:08.884Z"}
+{"duration":897,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:07:56.110Z"}
+{"duration":37,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:01.755Z"}
+{"duration":82,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:05.078Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:07.280Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:13.120Z"}
+{"duration":63,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:23.912Z"}
+{"duration":64,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:25.060Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:25.684Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:25.880Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:26.084Z"}
+{"duration":78,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:30.665Z"}
+{"duration":81,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:32.115Z"}
+{"duration":64,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:32.540Z"}
+{"duration":75,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:32.730Z"}
+{"duration":73,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:33.076Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:44.065Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:08:51.469Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:09:12.109Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:09:17.792Z"}
+{"duration":232,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":1,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T13:09:52.557Z"}
+{"duration":234,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T13:10:25.165Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["user","$2b$12$wuNk8ciI7aj1fJCW9BODfO4CuCB0EBb9vF5upLaekShSfxSs5U8bS","email@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T13:10:25.447Z"}
+{"duration":29,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:10:25.494Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:10:25.520Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["user","email@email.com","ecdfaa05-45f4-4f2f-b078-07dd2f17f6fd"],"rows":0,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T13:10:29.849Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["user","$2b$12$DhatJjmUQ2VAgR7buRYXfO5WCgerYkOZ1A9k9C4RzwvV5nourzP9e","email@email.com","","ecdfaa05-45f4-4f2f-b078-07dd2f17f6fd"],"rows":1,"text":"UPDATE users SET username = $1, password = $2, email = $3, profile_picture = $4 WHERE user_id = $5 RETURNING *","timestamp":"2024-05-22T13:10:30.131Z"}
+{"duration":272,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:11:38.866Z"}
+{"duration":484,"level":"info","message":"Executed query","params":["user","example@example.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T13:14:26.779Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["user","$2b$12$ZWB2ATfJZ6SMNMVBLtpWm.ieYd79xpI7QbwxUH/p4oB6qlTS9CyuW","example@example.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T13:14:27.088Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:14:27.138Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:14:27.168Z"}
+{"duration":805,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:22:04.361Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:22:04.387Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:22:14.078Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":1,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T13:22:28.982Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["user1","email1@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T13:22:36.487Z"}
+{"duration":72,"level":"info","message":"Executed query","params":["user1","$2b$12$xqGIU1uSvWWZgGi7cTVXPegaq38UA.b3w6FnZOIv6S7c2I/ZVYIGG","email1@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T13:22:36.776Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:22:36.817Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:22:36.844Z"}
+{"duration":241,"level":"info","message":"Executed query","params":["user","email@email.com","0a8b678d-a795-4c9d-80c7-a302048b2d7a"],"rows":1,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T13:26:30.559Z"}
+{"duration":64,"level":"info","message":"Executed query","params":["user","email@email.com","0a8b678d-a795-4c9d-80c7-a302048b2d7a"],"rows":1,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T13:26:35.646Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:27:00.843Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:27:00.870Z"}
+{"duration":24,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T13:27:18.081Z"}
+{"duration":72,"level":"info","message":"Executed query","params":["user","$2b$12$fa80o.0BpifmJrBCY.jFpuBov7hSHXJkbt7yw9f6.YnDvznjVzSPe","email@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T13:27:18.364Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:27:18.401Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:27:18.427Z"}
+{"duration":777,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:36:47.209Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:36:47.236Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:36:56.634Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:36:56.905Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:36:56.931Z"}
+{"duration":201,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:38:35.673Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:38:35.702Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:38:51.156Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:38:51.418Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:38:51.444Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["user","email@email.com","34910aba-ab8c-4b0e-8a42-1180ee2a8bd4"],"rows":0,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T13:38:54.332Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["user","$2b$12$yKAS/WpzYWg3QPjjs2l7AuxwlEut1RUAWgJVY7kAtoBg.VGtR5k2m","email@email.com",null,"34910aba-ab8c-4b0e-8a42-1180ee2a8bd4"],"rows":1,"text":"UPDATE users SET username = $1, password = $2, email = $3, profile_picture = $4 WHERE user_id = $5 RETURNING *","timestamp":"2024-05-22T13:38:54.630Z"}
+{"duration":192,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:41:17.938Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:41:17.964Z"}
+{"duration":313,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:42:00.086Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T13:42:24.881Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["user","$2b$12$nwQSLJoseeYc84ZVKSQbves.dYvZgi5f0ehFcZxNCKeu9pS2uXU/u","email@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T13:42:25.158Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:42:25.198Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T13:42:25.224Z"}
+{"duration":64,"level":"info","message":"Executed query","params":["user","email@email.com","abc0e630-493e-48a6-80dd-d48c30d3eed7"],"rows":0,"text":"SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3","timestamp":"2024-05-22T13:42:29.589Z"}
+{"duration":29,"level":"info","message":"Executed query","params":["user","$2b$12$lPxDHUmdK.YYNhYXNdVvBuSlYMNdK4eBcG2rBt35zOPC61vUG.AeG","email@email.com",null,"abc0e630-493e-48a6-80dd-d48c30d3eed7"],"rows":1,"text":"UPDATE users SET username = $1, password = $2, email = $3, profile_picture = $4 WHERE user_id = $5 RETURNING *","timestamp":"2024-05-22T13:42:29.836Z"}
+{"duration":226,"level":"info","message":"Executed query","params":["user"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T13:43:33.825Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:09:37.229Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:09:42.846Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:11:59.352Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:12:20.374Z"}
+{"duration":432,"level":"info","message":"Executed query","params":["user2","email2@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T14:16:35.617Z"}
+{"duration":74,"level":"info","message":"Executed query","params":["user2","$2b$12$QPc.frtsyEyHx4VBGZTXc..IfPJeYbcUfC8eiGeJK0RQpsGk4EbMG","email2@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T14:16:35.902Z"}
+{"duration":35,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:16:35.967Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:16:35.994Z"}
+{"duration":243,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:20:09.500Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:20:09.526Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:20:22.050Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:20:22.077Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:20:41.929Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:20:41.956Z"}
+{"duration":378,"level":"info","message":"Executed query","params":["user2"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T14:23:53.236Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["user2"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T14:24:10.336Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:24:10.622Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:24:10.649Z"}
+{"duration":237,"level":"info","message":"Executed query","params":["user2"],"rows":1,"text":"SELECT * FROM users WHERE username = $1","timestamp":"2024-05-22T14:25:20.784Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:25:21.048Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:25:21.077Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:25:30.894Z"}
+{"duration":22,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:25:30.919Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:26:10.916Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:26:24.777Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:33:41.510Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:33:41.745Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:03.565Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:03.746Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:04.317Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:04.512Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:15.405Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:15.606Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:41.294Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:41.494Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:42.600Z"}
+{"error":{"code":"42703","file":"parse_relation.c","length":110,"line":"3713","name":"error","position":"8","routine":"errorMissingColumn","severity":"ERROR"},"level":"error","message":"Query error","text":"SELECT question_id, text FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:34:42.791Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:35:22.012Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:42:40.974Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:42:41.763Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:42:50.807Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:42:57.710Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:43:00.165Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:43:02.822Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:43:05.714Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:43:08.890Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:43:18.004Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:43:21.674Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:43:28.198Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:43:31.828Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:43:44.972Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:44:02.238Z"}
+{"duration":210,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:46:28.114Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["4da0f523-b127-47ae-9345-ae2b249edc9d"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:46:28.182Z"}
+{"duration":73,"level":"info","message":"Executed query","params":["353171bc-136e-4317-b4f6-987392426d56"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:46:28.255Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:46:28.285Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["4da0f523-b127-47ae-9345-ae2b249edc9d"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:46:28.355Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["353171bc-136e-4317-b4f6-987392426d56"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:46:28.423Z"}
+{"duration":186,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:46:28.579Z"}
+{"duration":63,"level":"info","message":"Executed query","params":["4da0f523-b127-47ae-9345-ae2b249edc9d"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:46:28.642Z"}
+{"duration":63,"level":"info","message":"Executed query","params":["353171bc-136e-4317-b4f6-987392426d56"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:46:28.706Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:46:28.736Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["4da0f523-b127-47ae-9345-ae2b249edc9d"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:46:28.803Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["353171bc-136e-4317-b4f6-987392426d56"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:46:28.871Z"}
+{"duration":301,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:48:11.367Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["4da0f523-b127-47ae-9345-ae2b249edc9d"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:48:11.434Z"}
+{"duration":63,"level":"info","message":"Executed query","params":["353171bc-136e-4317-b4f6-987392426d56"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:48:11.498Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:48:11.524Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["4da0f523-b127-47ae-9345-ae2b249edc9d"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:48:11.591Z"}
+{"duration":63,"level":"info","message":"Executed query","params":["353171bc-136e-4317-b4f6-987392426d56"],"rows":1,"text":"SELECT username profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:48:11.654Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:49:03.995Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:49:17.655Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T14:49:24.253Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:49:27.853Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["4da0f523-b127-47ae-9345-ae2b249edc9d"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:49:27.919Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["353171bc-136e-4317-b4f6-987392426d56"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:49:27.986Z"}
+{"duration":22,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:49:28.014Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["4da0f523-b127-47ae-9345-ae2b249edc9d"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:49:28.082Z"}
+{"duration":64,"level":"info","message":"Executed query","params":["353171bc-136e-4317-b4f6-987392426d56"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:49:28.147Z"}
