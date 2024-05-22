@@ -2,13 +2,14 @@ DROP TABLE IF EXISTS users CASCADE;
 DROP TABLE IF EXISTS question CASCADE;
 DROP TABLE IF EXISTS answer CASCADE;
 DROP TABLE IF EXISTS comments CASCADE;
+DROP TABLE IF EXISTS comment CASCADE;
 DROP TABLE IF EXISTS subject CASCADE;
 DROP TABLE IF EXISTS rank CASCADE;
 
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
 CREATE TABLE users (
-    user_id VARCHAR(36) PRIMARY KEY DEFAULT (gen_random_uuid()::text),
+    user_id VARCHAR(36) PRIMARY KEY DEFAULT (gen_random_uuid()::text), 
     username VARCHAR UNIQUE NOT NULL,
     password VARCHAR NOT NULL,
     email VARCHAR NOT NULL,
@@ -45,15 +46,15 @@ CREATE TABLE answer (
 );
 
 
-CREATE TABLE comments (
+CREATE TABLE comment (
     id VARCHAR(36) PRIMARY KEY DEFAULT (gen_random_uuid()::text),
     answer_id VARCHAR(36) NOT NULL,
     user_id VARCHAR(36) NOT NULL,
     text TEXT,
     likes INT DEFAULT 0,
     written_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT fk_comments_answer FOREIGN KEY (answer_id) REFERENCES answer (id),
-    CONSTRAINT fk_comments_user FOREIGN KEY (user_id) REFERENCES users (user_id)
+    CONSTRAINT fk_comment_answer FOREIGN KEY (answer_id) REFERENCES answer (id),
+    CONSTRAINT fk_comment_user FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
 
@@ -89,8 +90,8 @@ INSERT INTO answer (question_id, subject_id, text, upvote, downvote, image) VALU
 ((SELECT id FROM question WHERE text = 'What is the principle behind this physics concept?'), (SELECT id FROM subject WHERE name = 'Physics'), 'It is based on the laws of thermodynamics.', 15, 3, 'https://example.com/answers/image2.jpg');
 
 
--- Insert comments
-INSERT INTO comments (answer_id, user_id, text, likes) VALUES
+-- Insert comment
+INSERT INTO comment (answer_id, user_id, text, likes) VALUES
 ((SELECT id FROM answer WHERE text = 'You solve it by isolating the variable.'), (SELECT user_id FROM users WHERE username = 'john_doe'), 'This is a great explanation, thanks!', 5),
 ((SELECT id FROM answer WHERE text = 'It is based on the laws of thermodynamics.'), (SELECT user_id FROM users WHERE username = 'jane_doe'), 'Could you elaborate on the second law part?', 3);
 

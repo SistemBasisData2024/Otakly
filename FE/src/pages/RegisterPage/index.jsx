@@ -27,7 +27,7 @@ const RegisterPage = () => {
         }
     }
     return (
-        <div className="flex justify-center items-center h-screen bg-gray-100">
+        <div className="flex justify-center items-center h-screen ">
             <div className="bg-white p-8 rounded shadow-md">
                 <h2 className="text-2xl font-bold mb-4 w-max">Register</h2>
                 {error && <p className="text-red-500 mb-4">{error}</p>}
@@ -39,7 +39,7 @@ const RegisterPage = () => {
                         <input
                             type="text"
                             id="name"
-                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-[#CEAB79]"
                             placeholder="Enter your name"
                             onChange={e => setUsername(e.target.value)}
                         />
@@ -51,7 +51,7 @@ const RegisterPage = () => {
                         <input
                             type="email"
                             id="email"
-                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-[#CEAB79]"
                             placeholder="Enter your email"
                             onChange={e => setEmail(e.target.value)}
                         />
@@ -63,14 +63,14 @@ const RegisterPage = () => {
                         <input
                             type="password"
                             id="password"
-                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-blue-500"
+                            className="w-full px-3 py-2 border border-gray-300 rounded focus:outline-none focus:border-[#CEAB79]"
                             placeholder="Enter your password"
                             onChange={e => setPassword(e.target.value)}
                         />
                     </div>
                     <button
                         type="submit"
-                        className="w-full bg-blue-500 text-white py-2 px-4 rounded hover:bg-blue-600 focus:outline-none"
+                        className="w-full bg-[#C2855F] text-white py-2 px-4 rounded hover:bg-[#835b42] focus:outline-none"
                     >
                         Register
                     </button>

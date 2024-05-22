@@ -24,9 +24,19 @@ function HomePage() {
     }, []);
 
     return (
-        <div className='mt-[100px]'>
-            <h1 className='text-4xl font-bold'>Welcome to the Homepage!</h1>
-            <p className='text-lg'>This is a simple homepage created using React.</p>
+        <div className='mt-[80px]'>
+            <div className='flex justify-center mx-5'>
+                <input
+                    type='text'
+                    placeholder='Search...'
+                    className='border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#CEAB79] w-full sm:w-1/2'
+                />
+                <button
+                    className='ml-2 px-4 py-2 bg-[#CEAB79] text-white rounded-md hover:bg-[#a1865f] focus:outline-none focus:ring-2 focus:ring-blue-500'
+                >
+                    Search
+                </button>
+            </div>
             <div className='grid grid-cols-1 gap-4 mt-4'>
                 {newestQuestions.map((question) => (
                     <QuestionSummary key={question.id} question={question} />

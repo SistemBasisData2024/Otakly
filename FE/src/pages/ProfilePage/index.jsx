@@ -109,7 +109,7 @@ const ProfilePage = () => {
   };
 
   return (
-    <div className="flex flex-col sm:flex-row justify-center items-center h-screen bg-gray-100">
+    <div className="flex flex-col sm:flex-row justify-center items-center h-screen ">
       <div className="bg-white shadow-sm p-4 rounded-md m-3 sm:mt-0 mt-[200px]">
         <h2 className="text-2xl font-bold mb-4">User Profile</h2>
         <p>Username: {user.username}</p>
@@ -117,7 +117,7 @@ const ProfilePage = () => {
         <img
           src={user.profile_picture || defaultProfilePicture}
           alt="Profile Picture"
-          className="rounded-full w-32 h-32"
+          className="rounded-full w-32 h-32 object-cover object-center"
         />
         <button
           onClick={deleteUserHandler}
@@ -128,22 +128,36 @@ const ProfilePage = () => {
       </div>
       <div className="bg-white p-8 shadow-md rounded-md">
         <h2 className="text-2xl font-bold mb-4">Edit Profile</h2>
-        {message && <p className="text-red-500 mb-4">{message}</p>}
+        <p
+          className={
+            message && message.includes("successful")
+              ? "text-green-500 mb-4"
+              : "text-red-500 mb-4"
+          }
+        >
+          {message}
+        </p>
 
         <div className="mb-4">
           <UploadWidget onImageUpload={handleImageUpload} />
-         
-            {user.profile_picture != imageUrl ? <button
-            onClick={updateProfilePictureHandler}
-            className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mt-2"
-          >Save Profile Picture</button> : <></>}
+
+          {user.profile_picture != imageUrl ? (
+            <button
+              onClick={updateProfilePictureHandler}
+              className="bg-[#C2855F] hover:bg-[#9e6c4e] text-white py-2 px-4 rounded-md mt-2"
+            >
+              Save Profile Picture
+            </button>
+          ) : (
+            <></>
+          )}
         </div>
 
         <div className="mb-4">
           <button
             type="button"
             onClick={() => setShowUsernameInput(!showUsernameInput)}
-            className="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600"
+            className="bg-[#C2855F] text-white py-2 px-4 rounded-md hover:bg-[#9e6c4e]"
           >
             {showUsernameInput ? "Cancel" : "Change Username"}
           </button>
@@ -158,7 +172,7 @@ const ProfilePage = () => {
               />
               <button
                 type="submit"
-                className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mt-2"
+                className="bg-[#C2855F] hover:bg-[#9e6c4e] text-white py-2 px-4 rounded-md mt-2"
               >
                 Save Username
               </button>
@@ -170,7 +184,7 @@ const ProfilePage = () => {
           <button
             type="button"
             onClick={() => setShowPasswordInput(!showPasswordInput)}
-            className="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600"
+            className="bg-[#C2855F] hover:bg-[#9e6c4e] text-white py-2 px-4 rounded-md"
           >
             {showPasswordInput ? "Cancel" : "Change Password"}
           </button>
@@ -185,7 +199,7 @@ const ProfilePage = () => {
               />
               <button
                 type="submit"
-                className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mt-2"
+                className="bg-[#C2855F] hover:bg-[#9e6c4e] text-white py-2 px-4 rounded-md mt-2"
               >
                 Save Password
               </button>
@@ -197,7 +211,7 @@ const ProfilePage = () => {
           <button
             type="button"
             onClick={() => setShowEmailInput(!showEmailInput)}
-            className="bg-gray-500 text-white py-2 px-4 rounded-md hover:bg-gray-600"
+            className="bg-[#C2855F] text-white py-2 px-4 rounded-md hover:bg-[#9e6c4e]"
           >
             {showEmailInput ? "Cancel" : "Change Email"}
           </button>
@@ -212,7 +226,7 @@ const ProfilePage = () => {
               />
               <button
                 type="submit"
-                className="bg-blue-500 text-white py-2 px-4 rounded-md hover:bg-blue-600 mt-2"
+                className="bg-[#C2855F] hover:bg-[#9e6c4e] text-white py-2 px-4 rounded-md mt-2"
               >
                 Save Email
               </button>

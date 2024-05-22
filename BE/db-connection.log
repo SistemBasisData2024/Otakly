@@ -249,3 +249,549 @@
 {"duration":22,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T14:49:28.014Z"}
 {"duration":67,"level":"info","message":"Executed query","params":["4da0f523-b127-47ae-9345-ae2b249edc9d"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:49:28.082Z"}
 {"duration":64,"level":"info","message":"Executed query","params":["353171bc-136e-4317-b4f6-987392426d56"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T14:49:28.147Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T15:00:27.649Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T15:00:37.317Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T15:01:06.535Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:45:27.741Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:45:33.009Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:45:38.294Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:45:41.192Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:45:42.820Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:45:44.354Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:46:32.138Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:46:39.535Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:48:34.496Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:48:52.003Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:48:59.145Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:49:06.566Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:50:10.433Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:50:51.520Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:50:58.741Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:51:05.170Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:51:31.905Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:51:33.894Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:51:38.729Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:52:02.008Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:53:29.809Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:53:32.922Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:53:34.628Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:53:55.436Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:54:03.325Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:54:19.011Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:54:23.292Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:54:30.045Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:55:09.087Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:55:11.152Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:55:18.080Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:55:27.659Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:55:39.194Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:56:16.712Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:58:19.188Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:58:21.687Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:58:23.800Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:59:48.397Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:59:50.044Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T16:59:55.110Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:01:56.319Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:02:04.621Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:02:11.272Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:02:16.309Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:02:18.117Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:02:22.875Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:02:28.043Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:02:54.426Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:03:08.597Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:03:15.020Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:13:01.507Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:13:07.806Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:13:10.193Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:13:30.493Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:13:38.746Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:13:56.475Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:13:59.285Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:14:01.230Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:14:03.476Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:14:53.590Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:14:55.360Z"}
+{"level":"info","message":"Connected to the database","timestamp":"2024-05-22T17:15:14.439Z"}
+{"duration":252,"level":"info","message":"Executed query","params":["d19fa3e3-5d34-4099-8ac7-863b2fcef536"],"rows":0,"text":"SELECT * FROM question WHERE id = $1","timestamp":"2024-05-22T17:16:55.733Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM question WHERE id = $1","timestamp":"2024-05-22T17:17:15.282Z"}
+{"duration":73,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T17:17:15.356Z"}
+{"duration":29,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM answer WHERE question_id = $1","timestamp":"2024-05-22T17:17:15.386Z"}
+{"duration":72,"level":"info","message":"Executed query","params":[null],"rows":0,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T17:17:15.460Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["0a750252-92a7-40fe-9c17-89c094106fed"],"rows":1,"text":"SELECT * FROM comment WHERE answer_id = $1","timestamp":"2024-05-22T17:17:15.530Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T17:17:15.556Z"}
+{"duration":1421,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T17:18:18.057Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T17:18:18.124Z"}
+{"duration":243,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T17:18:18.301Z"}
+{"duration":1717,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:14:45.194Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:14:45.266Z"}
+{"duration":248,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:14:45.444Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:14:45.476Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:14:45.543Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:14:45.544Z"}
+{"duration":196,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:16:02.144Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:16:02.169Z"}
+{"duration":237,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:16:02.381Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:16:02.409Z"}
+{"duration":27,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:16:02.436Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:16:02.479Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:16:24.986Z"}
+{"duration":27,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:16:25.014Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:16:25.055Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:16:25.084Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:16:25.151Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:16:25.152Z"}
+{"duration":1588,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:20:02.677Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:20:02.744Z"}
+{"duration":204,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:20:02.882Z"}
+{"duration":23,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:20:02.909Z"}
+{"duration":23,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:20:02.933Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:20:02.975Z"}
+{"duration":226,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:23:49.979Z"}
+{"duration":28,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:23:50.008Z"}
+{"duration":234,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:23:50.214Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:23:50.242Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:23:50.311Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:23:50.313Z"}
+{"duration":1445,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:25:05.054Z"}
+{"duration":33,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:25:05.087Z"}
+{"duration":520,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:25:05.574Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:25:05.733Z"}
+{"duration":27,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:25:05.760Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:25:05.801Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:25:20.030Z"}
+{"duration":28,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:25:20.059Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:25:20.097Z"}
+{"duration":914,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:33:23.345Z"}
+{"duration":72,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:33:23.418Z"}
+{"duration":261,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:33:23.607Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:33:23.636Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:33:23.662Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:33:23.707Z"}
+{"duration":199,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:36:53.972Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:36:54.040Z"}
+{"duration":238,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:36:54.212Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:36:54.238Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:36:54.263Z"}
+{"duration":27,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:36:54.266Z"}
+{"duration":1768,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:39:19.733Z"}
+{"duration":80,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:39:19.814Z"}
+{"duration":235,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:39:19.969Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:39:19.999Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:39:20.065Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:39:20.067Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:39:28.456Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:39:28.524Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:39:28.525Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:39:28.553Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:39:28.578Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:39:28.620Z"}
+{"duration":205,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:40:00.286Z"}
+{"duration":73,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:00.360Z"}
+{"duration":242,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:00.529Z"}
+{"duration":34,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:40:01.963Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:02.032Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:02.033Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:40:25.671Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:25.740Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:25.741Z"}
+{"duration":38,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:40:48.458Z"}
+{"duration":30,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:48.489Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:48.528Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:40:51.085Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:51.152Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:40:51.153Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:13.413Z"}
+{"duration":27,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:13.441Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:13.485Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:15.498Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:15.568Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:15.569Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:17.203Z"}
+{"duration":27,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:17.231Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:17.272Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:18.942Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:18.967Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:19.008Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:22.434Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:22.506Z"}
+{"duration":74,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:22.509Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:25.287Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:25.353Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:25.356Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:27.088Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:27.157Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:27.157Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:28.146Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:28.213Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:28.214Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:44.957Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:45.025Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:45.025Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:46.852Z"}
+{"duration":74,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:46.926Z"}
+{"duration":76,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:46.928Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:48.113Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:48.185Z"}
+{"duration":73,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:48.187Z"}
+{"duration":31,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:54.442Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:54.508Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:54.509Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:41:57.566Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:57.633Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:41:57.633Z"}
+{"duration":33,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:42:10.156Z"}
+{"duration":31,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:10.187Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:10.226Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:42:22.176Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:22.202Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:22.246Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:42:23.665Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:23.691Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:23.734Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:42:30.054Z"}
+{"duration":24,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:30.080Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:30.122Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:42:32.102Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:32.173Z"}
+{"duration":72,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:32.174Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:42:34.177Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:34.202Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:34.202Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:42:35.918Z"}
+{"duration":74,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:35.993Z"}
+{"duration":75,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:35.994Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:42:37.088Z"}
+{"duration":37,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:37.126Z"}
+{"duration":80,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:37.169Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:42:39.218Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:39.285Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:42:39.288Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:43:08.217Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:43:08.285Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:43:08.286Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:43:20.989Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:43:21.058Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:43:21.061Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:43:30.531Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:43:30.597Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:43:30.598Z"}
+{"duration":1167,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:45:11.248Z"}
+{"duration":28,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:45:11.277Z"}
+{"duration":229,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:45:11.478Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:45:11.506Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:45:11.574Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:45:11.575Z"}
+{"duration":198,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:46:31.703Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:46:31.769Z"}
+{"duration":242,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:46:31.946Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:46:31.972Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:46:32.041Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:46:32.042Z"}
+{"duration":754,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:56:27.993Z"}
+{"duration":40,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:28.034Z"}
+{"duration":247,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:28.241Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:56:29.317Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:29.383Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:29.383Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:56:51.286Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:51.312Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:51.355Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:56:52.448Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:52.519Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:52.520Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:56:55.953Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:56.020Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:56:56.023Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:56:59.985Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:00.052Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:00.053Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:57:04.394Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:04.461Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:04.462Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:57:12.063Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:12.132Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:12.135Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:57:23.169Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:23.239Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:23.241Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:57:28.557Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:28.623Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:28.623Z"}
+{"duration":29,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:57:32.664Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:32.732Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:32.734Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:57:39.813Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:39.879Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:39.880Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:57:55.881Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:55.948Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:55.949Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:57:57.873Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:57.898Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:57:57.940Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:58:07.666Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:58:07.691Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:58:07.691Z"}
+{"duration":35,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T18:58:11.229Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:58:11.296Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T18:58:11.300Z"}
+{"duration":239,"level":"info","message":"Executed query","params":["user","email@email.com"],"rows":0,"text":"SELECT * FROM users WHERE username = $1 OR email = $2","timestamp":"2024-05-22T19:00:28.532Z"}
+{"duration":32,"level":"info","message":"Executed query","params":["user","$2b$12$ZQ.6slUfXaIq1WfPVHrwaOc/V6ScMgH1yKasJ2hfJJhRrKfy4lCbS","email@email.com"],"rows":1,"text":"INSERT INTO users (username, password, email) VALUES ($1, $2, $3) RETURNING *","timestamp":"2024-05-22T19:00:28.844Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:00:28.882Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:00:28.908Z"}
+{"duration":240,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:00:29.123Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:00:29.155Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:00:29.223Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:00:29.224Z"}
+{"duration":477,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:01:49.080Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:01:49.149Z"}
+{"duration":202,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:01:49.283Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:01:49.312Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:01:49.381Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:01:49.381Z"}
+{"duration":2061,"level":"info","message":"Executed query","params":["https://res.cloudinary.com/dscilmmzw/image/upload/v1716404882/xqyqop3qrxzar2jkcrnx.jpg","96b4ef7f-2b02-40d3-a8fc-4b28d2edd03b"],"rows":1,"text":"UPDATE users SET profile_picture = $1 WHERE user_id = $2 RETURNING *","timestamp":"2024-05-22T19:08:08.076Z"}
+{"error":{},"level":"error","message":"Query error","params":["https://res.cloudinary.com/dscilmmzw/image/upload/v1716405232/wksohyhzf32hh8ia2c13.jpg","96b4ef7f-2b02-40d3-a8fc-4b28d2edd03b"],"text":"UPDATE users SET profile_picture = $1 WHERE user_id = $2 RETURNING *","timestamp":"2024-05-22T19:14:08.687Z"}
+{"duration":557,"level":"info","message":"Executed query","params":["https://res.cloudinary.com/dscilmmzw/image/upload/v1716405232/wksohyhzf32hh8ia2c13.jpg","96b4ef7f-2b02-40d3-a8fc-4b28d2edd03b"],"rows":1,"text":"UPDATE users SET profile_picture = $1 WHERE user_id = $2 RETURNING *","timestamp":"2024-05-22T19:14:15.473Z"}
+{"duration":965,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:34:06.448Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:34:06.518Z"}
+{"duration":259,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:34:06.708Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:34:06.742Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:34:06.768Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:34:06.811Z"}
+{"duration":1142,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:48:42.309Z"}
+{"duration":934,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:48:42.310Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:42.379Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:42.379Z"}
+{"duration":192,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:42.503Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:48:42.530Z"}
+{"duration":24,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:42.555Z"}
+{"duration":262,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:42.572Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:42.597Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:48:43.288Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:43.314Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:43.357Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:48:43.382Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:43.451Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:48:43.452Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:08.914Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:08.985Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:08.985Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:09.011Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:09.080Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:09.081Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:12.061Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:12.131Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:12.133Z"}
+{"duration":29,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:12.164Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:12.233Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:12.234Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:14.102Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:14.171Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:14.172Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:14.199Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:14.264Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:14.268Z"}
+{"duration":201,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:44.632Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:44.701Z"}
+{"duration":228,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:44.861Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:44.893Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:44.961Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:44.963Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:45.847Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:45.913Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:45.913Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:45.940Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:46.011Z"}
+{"duration":73,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:46.014Z"}
+{"duration":30,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:49.599Z"}
+{"duration":29,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:49.629Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:49.669Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:49.697Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:49.765Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:49.766Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:54.078Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:54.105Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:54.145Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:54.171Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:54.238Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:49:54.243Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:49:59.969Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:00.037Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:00.038Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:00.065Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:00.133Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:00.136Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:02.362Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:02.429Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:02.430Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:02.458Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:02.525Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:02.526Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:03.554Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:03.621Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:03.622Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:03.650Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:03.717Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:03.718Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:04.840Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:04.909Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:04.910Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:04.938Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:05.005Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:05.006Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:09.594Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:09.661Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:09.662Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:09.690Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:09.761Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:09.762Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:11.438Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:11.505Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:11.506Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:11.534Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:11.601Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:11.602Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:15.401Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:15.470Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:15.470Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:15.497Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:15.566Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:15.567Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:25.142Z"}
+{"duration":27,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:25.169Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:25.210Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:25.238Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:25.305Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:25.306Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:26.481Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:26.507Z"}
+{"duration":28,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:26.510Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:26.539Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:26.605Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:26.606Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:30.345Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:30.370Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:30.370Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:30.399Z"}
+{"duration":26,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:30.425Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:30.469Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:32.021Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:32.047Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:32.089Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:32.116Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:32.182Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:32.185Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:37.081Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:37.151Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:37.152Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:37.178Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:37.203Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:37.245Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:39.160Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:39.226Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:39.229Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:50:39.257Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:39.325Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:50:39.326Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:00.709Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:00.777Z"}
+{"duration":71,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:00.781Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:00.807Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:00.833Z"}
+{"duration":72,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:00.880Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:03.306Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:03.332Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:03.373Z"}
+{"duration":28,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:03.403Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:03.470Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:03.473Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:07.793Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:07.861Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:07.861Z"}
+{"duration":27,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:07.890Z"}
+{"duration":28,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:07.919Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:07.958Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:10.897Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:10.966Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:10.966Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:10.992Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:11.057Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:11.061Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:13.317Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:13.385Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:13.386Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:13.413Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:13.439Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:13.482Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:18.963Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:19.030Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:19.033Z"}
+{"duration":29,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:51:19.063Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:19.129Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:51:19.129Z"}
+{"duration":195,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:52:02.964Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:52:03.034Z"}
+{"duration":233,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:52:03.198Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:52:03.226Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:52:03.294Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:52:03.295Z"}
+{"duration":25,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:52:06.006Z"}
+{"duration":26,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:52:06.033Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:52:06.073Z"}
+{"duration":24,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:52:06.099Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:52:06.170Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:52:06.170Z"}
+{"error":{},"level":"error","message":"Query error","text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:53:56.564Z"}
+{"duration":1587,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T19:53:58.159Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:53:58.229Z"}
+{"duration":246,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T19:53:58.407Z"}
+{"duration":1674,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM question WHERE id = $1","timestamp":"2024-05-22T20:01:48.685Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:01:48.711Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM answer WHERE question_id = $1","timestamp":"2024-05-22T20:01:48.778Z"}
+{"duration":69,"level":"info","message":"Executed query","params":[null],"rows":0,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:01:48.848Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["0a750252-92a7-40fe-9c17-89c094106fed"],"rows":1,"text":"SELECT * FROM comment WHERE answer_id = $1","timestamp":"2024-05-22T20:01:48.919Z"}
+{"duration":65,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:01:48.984Z"}
+{"duration":189,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T20:04:10.747Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:04:10.772Z"}
+{"duration":230,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:04:10.977Z"}
+{"duration":26,"level":"info","message":"Executed query","rows":2,"text":"SELECT * FROM question ORDER BY written_at DESC LIMIT 10","timestamp":"2024-05-22T20:04:11.007Z"}
+{"duration":73,"level":"info","message":"Executed query","params":["c06abad5-db02-46e8-9941-99d1e67cd848"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:04:11.081Z"}
+{"duration":74,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:04:11.082Z"}
+{"duration":240,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM question WHERE id = $1","timestamp":"2024-05-22T20:05:26.918Z"}
+{"duration":29,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:26.947Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM answer WHERE question_id = $1","timestamp":"2024-05-22T20:05:27.017Z"}
+{"duration":66,"level":"info","message":"Executed query","params":[null],"rows":0,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:27.085Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["0a750252-92a7-40fe-9c17-89c094106fed"],"rows":1,"text":"SELECT * FROM comment WHERE answer_id = $1","timestamp":"2024-05-22T20:05:27.154Z"}
+{"duration":70,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:27.225Z"}
+{"duration":66,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM question WHERE id = $1","timestamp":"2024-05-22T20:05:32.913Z"}
+{"duration":31,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:32.945Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM answer WHERE question_id = $1","timestamp":"2024-05-22T20:05:33.013Z"}
+{"duration":70,"level":"info","message":"Executed query","params":[null],"rows":0,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:33.084Z"}
+{"duration":73,"level":"info","message":"Executed query","params":["0a750252-92a7-40fe-9c17-89c094106fed"],"rows":1,"text":"SELECT * FROM comment WHERE answer_id = $1","timestamp":"2024-05-22T20:05:33.157Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:33.182Z"}
+{"duration":74,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM question WHERE id = $1","timestamp":"2024-05-22T20:05:33.257Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:33.325Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM answer WHERE question_id = $1","timestamp":"2024-05-22T20:05:33.393Z"}
+{"duration":68,"level":"info","message":"Executed query","params":[null],"rows":0,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:33.461Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["0a750252-92a7-40fe-9c17-89c094106fed"],"rows":1,"text":"SELECT * FROM comment WHERE answer_id = $1","timestamp":"2024-05-22T20:05:33.529Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:33.555Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM question WHERE id = $1","timestamp":"2024-05-22T20:05:58.085Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:58.154Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM answer WHERE question_id = $1","timestamp":"2024-05-22T20:05:58.180Z"}
+{"duration":26,"level":"info","message":"Executed query","params":[null],"rows":0,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:58.207Z"}
+{"duration":26,"level":"info","message":"Executed query","params":["0a750252-92a7-40fe-9c17-89c094106fed"],"rows":1,"text":"SELECT * FROM comment WHERE answer_id = $1","timestamp":"2024-05-22T20:05:58.233Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:05:58.301Z"}
+{"duration":26,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM question WHERE id = $1","timestamp":"2024-05-22T20:06:01.421Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:06:01.489Z"}
+{"duration":68,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM answer WHERE question_id = $1","timestamp":"2024-05-22T20:06:01.557Z"}
+{"duration":68,"level":"info","message":"Executed query","params":[null],"rows":0,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:06:01.625Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["0a750252-92a7-40fe-9c17-89c094106fed"],"rows":1,"text":"SELECT * FROM comment WHERE answer_id = $1","timestamp":"2024-05-22T20:06:01.693Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:06:01.761Z"}
+{"duration":238,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM question WHERE id = $1","timestamp":"2024-05-22T20:06:40.329Z"}
+{"duration":26,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:06:40.356Z"}
+{"duration":25,"level":"info","message":"Executed query","params":["28a1c6e5-19aa-4ed3-b38f-fa85ff07f2e3"],"rows":1,"text":"SELECT * FROM answer WHERE question_id = $1","timestamp":"2024-05-22T20:06:40.381Z"}
+{"duration":67,"level":"info","message":"Executed query","params":[null],"rows":0,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:06:40.449Z"}
+{"duration":69,"level":"info","message":"Executed query","params":["0a750252-92a7-40fe-9c17-89c094106fed"],"rows":1,"text":"SELECT * FROM comment WHERE answer_id = $1","timestamp":"2024-05-22T20:06:40.518Z"}
+{"duration":67,"level":"info","message":"Executed query","params":["c86cdd15-9fe5-449f-8aff-09f13cb3d1f9"],"rows":1,"text":"SELECT username, profile_picture FROM users WHERE user_id = $1","timestamp":"2024-05-22T20:06:40.585Z"}
