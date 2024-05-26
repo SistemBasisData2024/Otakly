@@ -71,37 +71,105 @@ exports.deleteUser = async (req, res) => {
   }
 }
 
-exports.updateUser = async (req, res) => {
+exports.updateUserUsername = async (req, res) => {
   const { user_id } = req.params;
-  const { username, password, email, profile_picture } = req.body;
+  const { username } = req.body;
 
   try {
-    // Check if the username or email already exists for another user
-    const checkExisting = `SELECT * FROM users WHERE (username = $1 OR email = $2) AND user_id != $3`;
-    const existingUsers = await neonPool.query(checkExisting, [username, email, user_id]);
-    if (existingUsers.rows.length > 0) {
-      const takenFields = [];
-      existingUsers.rows.forEach(row => {
-        if (row.username === username) takenFields.push("username");
-        if (row.email === email) takenFields.push("email");
-      });
-      return res.status(400).json({ message: `The following fields are already taken: ${takenFields.join(", ")}` });
+    if (!username) {
+      return res.status(400).json({ message: "Username field must be filled" });
+    }
+    const checkExisting = `SELECT * FROM users WHERE username = $1 AND user_id != $2`;
+    const existingUser = await neonPool.query(checkExisting, [username, user_id]);
+    if (existingUser.rows.length > 0) {
+      return res.status(400).json({ message: "Username already exists" });
     }
 
-    // Hash the password before storing it in the database
-    const hashedPassword = await bcrypt.hash(password, 12);
-
-    // Update the user information
-    const updateQuery = `UPDATE users SET username = $1, password = $2, email = $3, profile_picture = $4 WHERE user_id = $5 RETURNING *`;
-    const updatedUser = await neonPool.query(updateQuery, [username, hashedPassword, email, profile_picture, user_id]);
+    const updateQuery = `UPDATE users SET username = $1 WHERE user_id = $2 RETURNING *`;
+    const updatedUser = await neonPool.query(updateQuery, [username, user_id]);
     if (updatedUser.rows.length === 0) {
       return res.status(404).json({ message: "User not found" });
     }
 
     const userData = updatedUser.rows[0];
-    // Consider creating a safer payload that doesn’t include sensitive data
     const payload = { user_id: userData.user_id, username: userData.username, email: userData.email, profile_picture: userData.profile_picture };
-    res.status(200).json({ message: "User updated successfully", payload });
+    res.status(200).json({ message: "Username updated successfully", payload });
+  } catch (error) {
+    res.status(500).json({ message: "An error occurred", error });
+  }
+};
+
+exports.updateUserEmail = async (req, res) => {
+  const { user_id } = req.params;
+  const { email } = req.body;
+
+  try {
+    if (!email) {
+      return res.status(400).json({ message: "Email field must be filled" });
+    }
+    const checkExisting = `SELECT * FROM users WHERE email = $1 AND user_id != $2`;
+    const existingUser = await neonPool.query(checkExisting, [email, user_id]);
+    if (existingUser.rows.length > 0) {
+      return res.status(400).json({ message: "Email already exists" });
+    }
+
+    const updateQuery = `UPDATE users SET email = $1 WHERE user_id = $2 RETURNING *`;
+    const updatedUser = await neonPool.query(updateQuery, [email, user_id]);
+    if (updatedUser.rows.length === 0) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const userData = updatedUser.rows[0];
+    const payload = { user_id: userData.user_id, username: userData.username, email: userData.email, profile_picture: userData.profile_picture };
+    res.status(200).json({ message: "Email updated successfully", payload });
+  } catch (error) {
+    res.status(500).json({ message: "An error occurred", error });
+  }
+};
+
+exports.updateUserPassword = async (req, res) => {
+  const { user_id } = req.params;
+  const { password } = req.body;
+
+  try {
+    if (!password) {
+      return res.status(400).json({ message: "Password field must be filled" });
+    }
+
+    const hashedPassword = await bcrypt.hash(password, 12);
+
+    const updateQuery = `UPDATE users SET password = $1 WHERE user_id = $2 RETURNING *`;
+    const updatedUser = await neonPool.query(updateQuery, [hashedPassword, user_id]);
+    if (updatedUser.rows.length === 0) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const userData = updatedUser.rows[0];
+    const payload = { user_id: userData.user_id, username: userData.username, email: userData.email, profile_picture: userData.profile_picture };
+    res.status(200).json({ message: "Password updated successfully", payload });
+  } catch (error) {
+    res.status(500).json({ message: "An error occurred", error });
+  }
+};
+
+exports.updateUserProfilePicture = async (req, res) => {
+  const { user_id } = req.params;
+  const { profile_picture } = req.body;
+
+  try {
+    if (!profile_picture) {
+      return res.status(400).json({ message: "Profile picture field must be filled" });
+    }
+
+    const updateQuery = `UPDATE users SET profile_picture = $1 WHERE user_id = $2 RETURNING *`;
+    const updatedUser = await neonPool.query(updateQuery, [profile_picture, user_id]);
+    if (updatedUser.rows.length === 0) {
+      return res.status(404).json({ message: "User not found" });
+    }
+
+    const userData = updatedUser.rows[0];
+    const payload = { user_id: userData.user_id, username: userData.username, email: userData.email, profile_picture: userData.profile_picture };
+    res.status(200).json({ message: "Profile picture updated successfully", payload });
   } catch (error) {
     res.status(500).json({ message: "An error occurred", error });
   }
