@@ -3,7 +3,7 @@ const neonPool = require("../connect/connect.neon.js");
 
 exports.getNewestQuestions = async (req, res) => {
   try {
-    const query = `SELECT * FROM question ORDER BY written_at DESC LIMIT 10`;
+    const query = `SELECT * FROM question ORDER BY written_at DESC LIMIT 20`;
     const { rows: questions } = await neonPool.query(query);
 
     await Promise.all(questions.map(async (question) => {
@@ -35,6 +35,10 @@ exports.getQuestionDetails = async (req, res) => {
     const UserOfQuestionQuery = `SELECT username, profile_picture FROM users WHERE user_id = $1`;
     const { rows: user } = await neonPool.query(UserOfQuestionQuery, [question[0].user_id]);
     question[0].user = user[0];
+
+    const SubjectOfQuestionQuery = `SELECT * FROM subject WHERE id = $1`;
+    const { rows: subject } = await neonPool.query(SubjectOfQuestionQuery, [question[0].subject_id]);
+    question[0].subject = subject[0];
 
     const AnswerOfQuestionQuery = `SELECT * FROM answer WHERE question_id = $1`;
     const { rows: answers } = await neonPool.query(AnswerOfQuestionQuery, [question_id]);
