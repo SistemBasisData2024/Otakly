@@ -1,9 +1,12 @@
-import React, { useState, useEffect } from 'react';
-import { getNewestQuestions } from '../../request/user.request';
+import React, { useState, useEffect, useCallback } from 'react';
+import { getNewestQuestions, getSearchQuestions } from '../../request/user.request';
 import QuestionSummary from '../../components/QuestionSummary';
+import debounce from 'lodash.debounce';
 
 function HomePage() {
     const [newestQuestions, setNewestQuestions] = useState([]);
+    const [searchQuestions, setSearchQuestions] = useState([]);
+    const [searchInput, setSearchInput] = useState('');
 
     useEffect(() => {
         const fetchQuestions = async () => {
@@ -14,7 +17,6 @@ function HomePage() {
                 } else {
                     console.error('Failed to retrieve newest questions:', response.message);
                 }
-                console.log(response);
             } catch (error) {
                 console.error('Error fetching questions:', error);
             }
@@ -23,22 +25,59 @@ function HomePage() {
         fetchQuestions();
     }, []);
 
+    const handleSearchInputChange = (event) => {
+        setSearchInput(event.target.value);
+        debouncedSearch(event.target.value);
+    };
+
+    const fetchSearchQuestions = async (searchTerm) => {
+        if (searchTerm.trim() === '') {
+            setSearchQuestions([]);
+            return;
+        }
+
+        try {
+            const response = await getSearchQuestions(searchTerm);
+            if (response.message === "Questions retrieved successfully") {
+                setSearchQuestions(response.payload);
+            } else {
+                console.error('Failed to retrieve search questions:', response.message);
+            }
+        } catch (error) {
+            console.error('Error searching questions:', error);
+        }
+    };
+
+    const debouncedSearch = useCallback(
+        debounce((searchTerm) => {
+            fetchSearchQuestions(searchTerm);
+        }, 300),
+        []
+    );
+
+    const handleSearch = async () => {
+        fetchSearchQuestions(searchInput);
+    };
+
     return (
         <div className='mt-[80px]'>
             <div className='flex justify-center mx-5'>
                 <input
                     type='text'
                     placeholder='Search...'
+                    value={searchInput}
+                    onChange={handleSearchInputChange}
                     className='border border-gray-300 rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-[#CEAB79] w-full sm:w-1/2'
                 />
                 <button
                     className='ml-2 px-4 py-2 bg-[#CEAB79] text-white rounded-md hover:bg-[#a1865f] focus:outline-none focus:ring-2 focus:ring-blue-500'
+                    onClick={handleSearch}
                 >
                     Search
                 </button>
             </div>
             <div className='grid grid-cols-1 gap-4 mt-4'>
-                {newestQuestions.map((question) => (
+                {(searchInput ? searchQuestions : newestQuestions).map((question) => (
                     <QuestionSummary key={question.id} question={question} />
                 ))}
             </div>

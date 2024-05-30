@@ -69,4 +69,34 @@ exports.getQuestionDetails = async (req, res) => {
   }
 }
 
+exports.getSearchQuestions = async (req, res) => {
+  try {
+    const { search } = req.query;
+    console.log('Search parameter:', search);
+    let query = `SELECT * FROM question`;
+    const values = [];
+
+    if (search) {
+      query += ` WHERE text ILIKE $1`;
+      values.push(`%${search}%`);
+    }
+
+    console.log('Query:', query);
+    console.log('Values:', values);
+
+    const { rows: questions } = await neonPool.query(query, values);
+    console.log('Questions fetched:', questions);
+
+    await Promise.all(questions.map(async (question) => {
+      const userQuery = `SELECT username, profile_picture FROM users WHERE user_id = $1`;
+      const { rows: user } = await neonPool.query(userQuery, [question.user_id]);
+      question.user = user[0];
+    }));
+
+    res.json({ message: "Questions retrieved successfully", payload: questions });
+  } catch (error) {
+    console.error('Error fetching questions:', error);
+    res.status(500).json({ message: "An error occurred", error: error.message });
+  }
+};
 
