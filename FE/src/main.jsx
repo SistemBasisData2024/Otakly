@@ -9,6 +9,7 @@ import LoginPage from "./pages/LoginPage"
 import RegisterPage from "./pages/RegisterPage"
 import ProfilePage from "./pages/ProfilePage"
 import QuestionDetailPage from "./pages/QuestionDetailPage"
+import RankPage from "./pages/RankPage"
 
 const router = createBrowserRouter([
   {
@@ -33,6 +34,10 @@ const router = createBrowserRouter([
       {
         path: "/question/:questionId",
         element: <QuestionDetailPage/>,
+      },
+      {
+        path: "/rank",
+        element: <RankPage/>,
       }
     ],
   },
