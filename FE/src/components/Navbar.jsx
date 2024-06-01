@@ -9,7 +9,7 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   return (
-    <nav className="fixed top-0 w-full items-center flex justify-between flex-wrap p-3 bg-[#C8493A] rounded-b-2xl">
+    <nav className="fixed top-0 w-full items-center flex justify-between flex-wrap p-3 bg-[#C8493A] rounded-b-2xl z-50">
       <div className="flex items-center flex-shrink-0 text-white mr-6">
         <span
           className="font-semibold text-xl tracking-tight cursor-pointer"

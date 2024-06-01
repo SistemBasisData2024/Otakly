@@ -190,7 +190,7 @@ const QuestionDetailPage = () => {
         <div className="p-6 bg-gray-50 rounded-lg shadow-lg">
           <h1 className="text-2xl font-bold">{question.text}</h1>
           <span className="mt-2 text-sm text-gray-500">
-            Subject: {question.subject.name}
+            Subject: {question.subject ? question.subject.name : "Subject not found"}
           </span>
           <img
             src={question.image}
