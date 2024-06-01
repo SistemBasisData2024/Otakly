@@ -1,7 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
 import { getNewestQuestions, getSearchQuestions } from '../../request/user.request';
 import QuestionSummary from '../../components/QuestionSummary';
-import debounce from 'lodash.debounce';
 
 function HomePage() {
     const [newestQuestions, setNewestQuestions] = useState([]);
@@ -27,7 +26,6 @@ function HomePage() {
 
     const handleSearchInputChange = (event) => {
         setSearchInput(event.target.value);
-        debouncedSearch(event.target.value);
     };
 
     const fetchSearchQuestions = async (searchTerm) => {
@@ -47,13 +45,6 @@ function HomePage() {
             console.error('Error searching questions:', error);
         }
     };
-
-    const debouncedSearch = useCallback(
-        debounce((searchTerm) => {
-            fetchSearchQuestions(searchTerm);
-        }, 300),
-        []
-    );
 
     const handleSearch = async () => {
         fetchSearchQuestions(searchInput);
