@@ -149,3 +149,32 @@ exports.Undownvote = async (req, res) => {
 }
 
 
+exports.createAnswer = async (req, res) => {
+    const { question_id, user_id, text, image } = req.body;
+    try {
+        const query = `INSERT INTO answer(question_id, user_id, text, image) VALUES($1, $2, $3, $4) RETURNING *`;
+        const { rows: answer } = await neonPool.query(query, [question_id, user_id, text, image]);
+        res.status(201).json({
+            message: "Answer created successfully",
+            payload: answer[0],
+        });
+    } catch (error) {
+        console.log(error);
+        res.status(500).json({ message: "An error occurred", error });
+    }
+};
+
+exports.addAnswer = async (req, res) => {
+    const { user_id, question_id, text } = req.body;
+    try {
+        const query = `INSERT INTO answer(user_id, question_id, text) VALUES($1, $2, $3) RETURNING *`;
+        const { rows: answer } = await neonPool.query(query, [user_id, question_id, text]);
+        res.status(201).json({
+            message: "Jawaban berhasil ditambahkan",
+            payload: answer[0]
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "Terjadi kesalahan", error });
+    }
+};

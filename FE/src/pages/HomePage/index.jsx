@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { getNewestQuestions } from '../../request/user.request';
+import { getNewestQuestions } from '../../request/question.request';
 import QuestionSummary from '../../components/QuestionSummary';
 
 function HomePage() {
@@ -14,7 +14,6 @@ function HomePage() {
                 } else {
                     console.error('Failed to retrieve newest questions:', response.message);
                 }
-                console.log(response);
             } catch (error) {
                 console.error('Error fetching questions:', error);
             }

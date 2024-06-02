@@ -5,5 +5,7 @@ const commentController = require('../controllers/comment.controller.js');
 router.post('/isLiked', commentController.isLiked); 
 router.post('/likeComment', commentController.likeComment);
 router.post('/removeLike', commentController.removeLike);
+router.post('/addComment', commentController.addComment);
+
 
 module.exports = router;

@@ -19,6 +19,7 @@ app.use('/rank', rankRoute);
 app.use('/comment', commentRoute);
 app.use('/answer', answerRoute);
 
+
 app.listen(port, () => {
     console.info(`Server is running on port ${port}`);
 });
