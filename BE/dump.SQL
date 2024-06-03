@@ -5,11 +5,17 @@ DROP TABLE IF EXISTS comment CASCADE;
 DROP TABLE IF EXISTS answer CASCADE;
 DROP TABLE IF EXISTS question CASCADE;
 DROP TABLE IF EXISTS rank CASCADE;
-DROP TABLE IF EXISTS subject CASCADE;
 DROP TABLE IF EXISTS users CASCADE;
 
 -- Create the required extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
+
+-- Create ENUM type for subjects
+DO $$ BEGIN
+    IF NOT EXISTS (SELECT 1 FROM pg_type WHERE typname = 'subject_enum') THEN
+        CREATE TYPE subject_enum AS ENUM ('Math', 'Physics', 'Chemistry', 'Biology', 'Sociology', 'Economy', 'Geology');
+    END IF;
+END $$;
 
 -- Create users table
 CREATE TABLE users (
@@ -20,22 +26,15 @@ CREATE TABLE users (
     profile_picture VARCHAR
 );
 
--- Create subject table
-CREATE TABLE subject (
-    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
-    name VARCHAR NOT NULL UNIQUE
-);
-
 -- Create question table
 CREATE TABLE question (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     user_id UUID NOT NULL,
-    subject_id UUID,
+    subject subject_enum,
     image VARCHAR,
     text TEXT,
     written_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT fk_question_user FOREIGN KEY (user_id) REFERENCES users (user_id),
-    CONSTRAINT fk_question_subject FOREIGN KEY (subject_id) REFERENCES subject (id)
+    CONSTRAINT fk_question_user FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
 -- Create answer table
@@ -68,10 +67,9 @@ CREATE TABLE comment (
 CREATE TABLE rank (
     id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     user_id UUID NOT NULL,
-    subject_id UUID NOT NULL,
+    subject subject_enum NOT NULL,
     votes INT DEFAULT 0,
-    CONSTRAINT fk_rank_user FOREIGN KEY (user_id) REFERENCES users (user_id),
-    CONSTRAINT fk_rank_subject FOREIGN KEY (subject_id) REFERENCES subject (id)
+    CONSTRAINT fk_rank_user FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
 -- Create commentLike_user table
@@ -100,15 +98,10 @@ INSERT INTO users (username, password, email, profile_picture) VALUES
 ('user1', 'password1', 'user1@example.com', 'profile1.jpg'),
 ('user2', 'password2', 'user2@example.com', 'profile2.jpg');
 
--- Insert data into subject table
-INSERT INTO subject (name) VALUES
-('Mathematics'),
-('Science');
-
 -- Insert data into question table
-INSERT INTO question (user_id, subject_id, text, image) VALUES
-((SELECT user_id FROM users WHERE username = 'user1'), (SELECT id FROM subject WHERE name = 'Mathematics'), 'What is 2 + 2?', 'question1.jpg'),
-((SELECT user_id FROM users WHERE username = 'user2'), (SELECT id FROM subject WHERE name = 'Science'), 'What is photosynthesis?', 'question2.jpg');
+INSERT INTO question (user_id, subject, text, image) VALUES
+((SELECT user_id FROM users WHERE username = 'user1'), 'Math', 'What is 2 + 2?', 'question1.jpg'),
+((SELECT user_id FROM users WHERE username = 'user2'), 'Biology', 'What is photosynthesis?', 'question2.jpg');
 
 -- Insert data into answer table
 INSERT INTO answer (question_id, user_id, upvote, downvote, text, image) VALUES
@@ -121,11 +114,11 @@ INSERT INTO comment (answer_id, user_id, text, likes) VALUES
 ((SELECT id FROM answer WHERE text = 'Photosynthesis is the process by which green plants use sunlight to synthesize foods.'), (SELECT user_id FROM users WHERE username = 'user2'), 'Very informative.', 2);
 
 -- Insert data into rank table
-INSERT INTO rank (user_id, subject_id, votes) VALUES
-((SELECT user_id FROM users WHERE username = 'user1'), (SELECT id FROM subject WHERE name = 'Mathematics'), 10),
-((SELECT user_id FROM users WHERE username = 'user2'), (SELECT id FROM subject WHERE name = 'Science'), 5);
+INSERT INTO rank (user_id, subject, votes) VALUES
+((SELECT user_id FROM users WHERE username = 'user1'), 'Math', 10),
+((SELECT user_id FROM users WHERE username = 'user2'), 'Biology', 5);
 
--- Insert data into commentLike_user table
+-- Insert data into commentlike_user table
 INSERT INTO commentlike_user (comment_id, user_id) VALUES
 ((SELECT id FROM comment WHERE text = 'Great answer!'), (SELECT user_id FROM users WHERE username = 'user2')),
 ((SELECT id FROM comment WHERE text = 'Very informative.'), (SELECT user_id FROM users WHERE username = 'user1'));
@@ -143,7 +136,7 @@ BEGIN
     SET votes = (SELECT SUM(a.upvote - a.downvote)
                  FROM answer a
                  WHERE a.user_id = NEW.user_id AND a.question_id = NEW.question_id)
-    WHERE rank.user_id = NEW.user_id AND rank.subject_id = (SELECT subject_id FROM question WHERE id = NEW.question_id);
+    WHERE rank.user_id = NEW.user_id AND rank.subject = (SELECT subject FROM question WHERE id = NEW.question_id);
     RETURN NEW;
 END;
 $$ LANGUAGE plpgsql;

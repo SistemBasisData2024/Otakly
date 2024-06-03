@@ -28,7 +28,7 @@ const UploadWidget = ({ onImageUpload }) => {
         onClick={() => widgetRef.current.open()}
         className="bg-[#C2855F] hover:bg-[#9e6c4e] text-white font-bold py-2 px-4 rounded"
       >
-        Upload
+        Upload Image
       </button>
       {imageUrl && (
         <div>

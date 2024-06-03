@@ -1,5 +1,6 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
+import defaultProfilePicture from "../assets/default_propic.jpg"; 
 
 const QuestionSummary = ({ question }) => {
   const navigate = useNavigate();
@@ -21,7 +22,7 @@ const QuestionSummary = ({ question }) => {
       <div className="flex items-center">
         <img
           className="w-8 h-8 rounded-full object-cover object-center"
-          src={question.user.profile_picture}
+          src={question.user.profile_picture || defaultProfilePicture}
           alt="Profile Picture"
         />
         <p className="ml-2">{question.user.username}</p>

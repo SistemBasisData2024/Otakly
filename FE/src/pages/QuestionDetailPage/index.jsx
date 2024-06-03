@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useNavigate, useParams } from "react-router-dom";
+import {useParams } from "react-router-dom";
+import defaultProfilePicture from "../../assets/default_propic.jpg";
 import axios from "axios";
 import { getQuestionDetails } from "../../request/question.request";
 import upvoteClicked from "../../assets/upvoteClicked.svg";
@@ -23,6 +24,7 @@ import {
 } from "../../request/answer.request";
 import { formatDistanceToNow } from "date-fns";
 import { enUS } from "date-fns/locale";
+import UploadWidget from "../../components/UploadWidget";
 
 const QuestionDetailPage = () => {
   const { questionId } = useParams();
@@ -33,6 +35,7 @@ const QuestionDetailPage = () => {
   const [newAnswer, setNewAnswer] = useState("");
   const [commentTexts, setCommentTexts] = useState({});
   const [visibleComments, setVisibleComments] = useState({});
+  const [imageUrl, setImageUrl] = useState("");
 
   const BASE_URL =
     process.env.NODE_ENV === "production"
@@ -49,7 +52,7 @@ const QuestionDetailPage = () => {
           const initialAnswerVotes = {};
 
           if (payload.subject) {
-            console.log("Subject:", payload.subject.name);
+            console.log("Subject:", payload.subject);
           } else {
             console.log("Subject not found");
           }
@@ -64,8 +67,10 @@ const QuestionDetailPage = () => {
             if (user) {
               const voteStatus = await CheckUserVote(user.user_id, answer.id);
               console.log("voteStatus:", voteStatus);
-              initialAnswerVotes[answer.id].upvotedByUser = voteStatus.payload.upvote;
-              initialAnswerVotes[answer.id].downvotedByUser = voteStatus.payload.downvote;
+              initialAnswerVotes[answer.id].upvotedByUser =
+                voteStatus.payload.upvote;
+              initialAnswerVotes[answer.id].downvotedByUser =
+                voteStatus.payload.downvote;
             }
 
             for (const comment of answer.comments) {
@@ -76,7 +81,8 @@ const QuestionDetailPage = () => {
 
               if (user) {
                 const likedStatus = await isLiked(comment.id, user.user_id);
-                initialCommentLikes[comment.id].likedByUser = likedStatus.payload;
+                initialCommentLikes[comment.id].likedByUser =
+                  likedStatus.payload;
               }
             }
           }
@@ -84,7 +90,7 @@ const QuestionDetailPage = () => {
           setQuestion(payload);
           setCommentLikes(initialCommentLikes);
           setAnswerVotes(initialAnswerVotes);
-          console.log("initialAnswerVotes:", initialAnswerVotes); 
+          console.log("initialAnswerVotes:", initialAnswerVotes);
         } else {
           console.error("Failed to retrieve question:", response.message);
         }
@@ -156,6 +162,7 @@ const QuestionDetailPage = () => {
           user_id: user.user_id,
           question_id: questionId,
           text: newAnswer,
+          image: imageUrl,
         },
         { headers: { "Content-Type": "application/json" } }
       );
@@ -218,13 +225,17 @@ const QuestionDetailPage = () => {
     return bScore - aScore;
   });
 
+  const handleImageUpload = (url) => {
+    setImageUrl(url);
+  };
+
   return (
     <div className="mt-[80px] mx-5">
       {question ? (
         <div className="p-6 bg-gray-50 rounded-lg shadow-lg">
           <h1 className="text-2xl font-bold">{question.text}</h1>
           <span className="mt-2 text-sm text-gray-500">
-            Subject: {question.subject ? question.subject.name : "Subject not found"}
+            Subject: {question.subject ? question.subject : "Subject not found"}
           </span>
           {question.image && (
             <img
@@ -236,7 +247,7 @@ const QuestionDetailPage = () => {
           <div className="mt-4 flex items-center">
             <img
               className="w-10 h-10 rounded-full object-cover object-center"
-              src={question.user.profile_picture}
+              src={question.user.profile_picture || defaultProfilePicture}
               alt="Profile"
             />
             <span className="ml-2 text-sm text-gray-500">
@@ -248,7 +259,7 @@ const QuestionDetailPage = () => {
             </span>
           </div>
 
-          <div className="mt-4 flex items-center">
+          <div className="mt-4 items-center">
             <form onSubmit={handleSubmitAnswer}>
               <textarea
                 value={newAnswer}
@@ -256,12 +267,15 @@ const QuestionDetailPage = () => {
                 placeholder="Masukkan jawaban Anda..."
                 className="w-full h-24 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300"
               ></textarea>
-              <button
-                type="submit"
-                className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
-              >
-                Submit Jawaban
-              </button>
+              <div className="mt-2 flex flex-col">
+                <UploadWidget onImageUpload={handleImageUpload} />
+                <button
+                  type="submit"
+                  className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                >
+                  Submit Jawaban
+                </button>
+              </div>
             </form>
           </div>
           <div className="mt-6">
@@ -317,14 +331,18 @@ const QuestionDetailPage = () => {
                     onClick={() => toggleCommentsVisibility(answer.id)}
                     className="text-blue-500 underline"
                   >
-                    {visibleComments[answer.id] ? "Hide Comments" : "Show Comments"}
+                    {visibleComments[answer.id]
+                      ? "Hide Comments"
+                      : "Show Comments"}
                   </button>
                   {visibleComments[answer.id] && (
                     <div>
                       <form onSubmit={(e) => handleSubmitComment(e, answer.id)}>
                         <textarea
                           value={commentTexts[answer.id] || ""}
-                          onChange={(e) => handleCommentTextChange(e, answer.id)}
+                          onChange={(e) =>
+                            handleCommentTextChange(e, answer.id)
+                          }
                           placeholder="Tulis komentar Anda..."
                           className="w-full h-16 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300"
                         ></textarea>
@@ -344,7 +362,10 @@ const QuestionDetailPage = () => {
                             {comment.user && comment.user.profile_picture && (
                               <img
                                 className="w-8 h-8 rounded-full object-cover object-center"
-                                src={comment.user.profile_picture}
+                                src={
+                                  comment.user.profile_picture ||
+                                  defaultProfilePicture
+                                }
                                 alt="Profile"
                               />
                             )}

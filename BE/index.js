@@ -6,7 +6,6 @@ const questionRoute = require('./routes/question.routes.js');
 const rankRoute = require('./routes/rank.routes.js');
 const commentRoute = require('./routes/comment.routes.js');
 const answerRoute = require('./routes/answer.routes.js');
-const subjectRoute = require('./routes/subject.routes.js')
 const port = 5000;
 
 app.use(express.json());
@@ -19,8 +18,6 @@ app.use('/question', questionRoute);
 app.use('/rank', rankRoute);
 app.use('/comment', commentRoute);
 app.use('/answer', answerRoute);
-app.use('/subject', subjectRoute);
-
 
 app.listen(port, () => {
     console.info(`Server is running on port ${port}`);

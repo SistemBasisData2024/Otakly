@@ -193,14 +193,14 @@ exports.addAnswer = async (req, res) => {
       question_id,
       text,
     ]);
-    const checkRankQuery = `SELECT * FROM rank WHERE user_id = $1 AND subject_id = (SELECT subject_id FROM answer WHERE question_id = $2)`;
+    const checkRankQuery = `SELECT * FROM rank WHERE user_id = $1 AND subject = (SELECT subject FROM answer WHERE question_id = $2)`;
     const { rows: existingRank } = await neonPool.query(checkRankQuery, [
       user_id,
       question_id,
     ]);
 
     if (existingRank.length === 0) {
-      const insertRankQuery = `INSERT INTO rank(user_id, subject_id, votes) VALUES($1, (SELECT subject_id FROM answer WHERE question_id = $2), 0) RETURNING *`;
+      const insertRankQuery = `INSERT INTO rank(user_id, subject, votes) VALUES($1, (SELECT subject FROM question WHERE id = $2), 0) RETURNING *`;
       await neonPool.query(insertRankQuery, [user_id, question_id]);
     }
 
