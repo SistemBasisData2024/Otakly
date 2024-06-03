@@ -1,5 +1,6 @@
 import React, { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { useNavigate, useParams } from "react-router-dom";
+import axios from "axios";
 import { getQuestionDetails } from "../../request/question.request";
 import upvoteClicked from "../../assets/upvoteClicked.svg";
 import upvoteUnclicked from "../../assets/upvoteUnclicked.svg";
@@ -13,9 +14,15 @@ import {
   likeComment,
   removeLike,
 } from "../../request/comment.request";
-import { CheckUserVote, Upvote, Downvote, Unupvote, Undownvote } from "../../request/answer.request";
+import {
+  CheckUserVote,
+  Upvote,
+  Downvote,
+  Unupvote,
+  Undownvote,
+} from "../../request/answer.request";
 import { formatDistanceToNow } from "date-fns";
-import { enUS } from 'date-fns/locale';
+import { enUS } from "date-fns/locale";
 
 const QuestionDetailPage = () => {
   const { questionId } = useParams();
@@ -23,6 +30,14 @@ const QuestionDetailPage = () => {
   const { user } = useUser();
   const [commentLikes, setCommentLikes] = useState({});
   const [answerVotes, setAnswerVotes] = useState({});
+  const [newAnswer, setNewAnswer] = useState("");
+  const [commentTexts, setCommentTexts] = useState({});
+  const [visibleComments, setVisibleComments] = useState({});
+
+  const BASE_URL =
+    process.env.NODE_ENV === "production"
+      ? "https://localhost:5000"
+      : "http://localhost:5000";
 
   useEffect(() => {
     const fetchQuestion = async () => {
@@ -33,6 +48,12 @@ const QuestionDetailPage = () => {
           const initialCommentLikes = {};
           const initialAnswerVotes = {};
 
+          if (payload.subject) {
+            console.log("Subject:", payload.subject.name);
+          } else {
+            console.log("Subject not found");
+          }
+
           for (const answer of payload.answers) {
             initialAnswerVotes[answer.id] = {
               upvotedByUser: false,
@@ -42,8 +63,9 @@ const QuestionDetailPage = () => {
 
             if (user) {
               const voteStatus = await CheckUserVote(user.user_id, answer.id);
-              initialAnswerVotes[answer.id].upvotedByUser = voteStatus.upvote;
-              initialAnswerVotes[answer.id].downvotedByUser = voteStatus.downvote;
+              console.log("voteStatus:", voteStatus);
+              initialAnswerVotes[answer.id].upvotedByUser = voteStatus.payload.upvote;
+              initialAnswerVotes[answer.id].downvotedByUser = voteStatus.payload.downvote;
             }
 
             for (const comment of answer.comments) {
@@ -62,10 +84,10 @@ const QuestionDetailPage = () => {
           setQuestion(payload);
           setCommentLikes(initialCommentLikes);
           setAnswerVotes(initialAnswerVotes);
+          console.log("initialAnswerVotes:", initialAnswerVotes); 
         } else {
           console.error("Failed to retrieve question:", response.message);
         }
-        console.log(response);
       } catch (error) {
         console.error("Error fetching question:", error);
       }
@@ -84,100 +106,110 @@ const QuestionDetailPage = () => {
       const currentLikes = commentLikes[commentId].likes;
       if (commentLikes[commentId].likedByUser) {
         await removeLike(commentId, user.user_id);
-        setCommentLikes({
-          ...commentLikes,
-          [commentId]: {
-            likedByUser: false,
-            likes: currentLikes - 1,
-          },
-        });
-        console.log("Removed like");
       } else {
         await likeComment(commentId, user.user_id);
-        setCommentLikes({
-          ...commentLikes,
-          [commentId]: {
-            likedByUser: true,
-            likes: currentLikes + 1,
-          },
-        });
-        console.log("Added like");
       }
+      window.location.reload();
     } catch (error) {
       console.error("Error handling like:", error);
     }
   };
 
-  const handleUpvoteClick = async (answerId) => {
+  const handleVoteClick = async (answerId, type) => {
     if (!user) {
       alert("Please log in to vote.");
       return;
     }
 
     try {
-      const currentVotes = answerVotes[answerId].votes;
-      if (answerVotes[answerId].upvotedByUser) {
-        await Unupvote(user.user_id, answerId);
-        setAnswerVotes({
-          ...answerVotes,
-          [answerId]: {
-            upvotedByUser: false,
-            downvotedByUser: false,
-            votes: currentVotes - 1,
-          },
-        });
-        console.log("Removed upvote");
-      } else {
-        await Upvote(user.user_id, answerId);
-        setAnswerVotes({
-          ...answerVotes,
-          [answerId]: {
-            upvotedByUser: true,
-            downvotedByUser: false,
-            votes: currentVotes + 1,
-          },
-        });
-        console.log("Added upvote");
+      if (type === "upvote") {
+        if (answerVotes[answerId].upvotedByUser) {
+          await Unupvote(user.user_id, answerId);
+        } else {
+          await Upvote(user.user_id, answerId);
+        }
+      } else if (type === "downvote") {
+        if (answerVotes[answerId].downvotedByUser) {
+          await Undownvote(user.user_id, answerId);
+        } else {
+          await Downvote(user.user_id, answerId);
+        }
       }
+      window.location.reload();
     } catch (error) {
-      console.error("Error handling upvote:", error);
+      console.error(`Error handling ${type}:`, error);
     }
   };
 
-  const handleDownvoteClick = async (answerId) => {
+  const handleSubmitAnswer = async (e) => {
+    e.preventDefault();
+
     if (!user) {
-      alert("Please log in to vote.");
+      alert("Silakan login untuk mengirim jawaban.");
       return;
     }
 
     try {
-      const currentVotes = answerVotes[answerId].votes;
-      if (answerVotes[answerId].downvotedByUser) {
-        await Undownvote(user.user_id, answerId);
-        setAnswerVotes({
-          ...answerVotes,
-          [answerId]: {
-            upvotedByUser: false,
-            downvotedByUser: false,
-            votes: currentVotes + 1,
-          },
-        });
-        console.log("Removed downvote");
-      } else {
-        await Downvote(user.user_id, answerId);
-        setAnswerVotes({
-          ...answerVotes,
-          [answerId]: {
-            upvotedByUser: false,
-            downvotedByUser: true,
-            votes: currentVotes - 1,
-          },
-        });
-        console.log("Added downvote");
-      }
+      await axios.post(
+        `${BASE_URL}/answer/addAnswer`,
+        {
+          user_id: user.user_id,
+          question_id: questionId,
+          text: newAnswer,
+        },
+        { headers: { "Content-Type": "application/json" } }
+      );
+
+      setNewAnswer("");
+      window.location.reload();
     } catch (error) {
-      console.error("Error handling downvote:", error);
+      console.error("Error mengirim jawaban:", error);
     }
+  };
+
+  const handleSubmitComment = async (e, answerId) => {
+    e.preventDefault();
+
+    if (!user) {
+      alert("Silakan login untuk memberi komentar.");
+      return;
+    }
+
+    try {
+      const newText = commentTexts[answerId];
+      await axios.post(
+        `${BASE_URL}/comment/addComment`,
+        {
+          user_id: user.user_id,
+          answer_id: answerId,
+          text: newText,
+        },
+        { headers: { "Content-Type": "application/json" } }
+      );
+
+      setCommentTexts((prevTexts) => ({
+        ...prevTexts,
+        [answerId]: "",
+      }));
+      window.location.reload();
+    } catch (error) {
+      console.error("Error submitting comment:", error);
+    }
+  };
+
+  const handleCommentTextChange = (e, answerId) => {
+    const newText = e.target.value;
+    setCommentTexts({
+      ...commentTexts,
+      [answerId]: newText,
+    });
+  };
+
+  const toggleCommentsVisibility = (answerId) => {
+    setVisibleComments((prevState) => ({
+      ...prevState,
+      [answerId]: !prevState[answerId],
+    }));
   };
 
   const sortedAnswers = question?.answers.sort((a, b) => {
@@ -185,8 +217,6 @@ const QuestionDetailPage = () => {
     const bScore = answerVotes[b.id]?.votes || 0;
     return bScore - aScore;
   });
-
-  
 
   return (
     <div className="mt-[80px] mx-5">
@@ -210,9 +240,29 @@ const QuestionDetailPage = () => {
               alt="Profile"
             />
             <span className="ml-2 text-sm text-gray-500">
-              Asked by {question.user.username} {" "}
-              {formatDistanceToNow(new Date(new Date(question.written_at).toLocaleString()), { addSuffix: true, locale: enUS })}
+              Asked by {question.user.username}{" "}
+              {formatDistanceToNow(
+                new Date(new Date(question.written_at).toLocaleString()),
+                { addSuffix: true, locale: enUS }
+              )}
             </span>
+          </div>
+
+          <div className="mt-4 flex items-center">
+            <form onSubmit={handleSubmitAnswer}>
+              <textarea
+                value={newAnswer}
+                onChange={(e) => setNewAnswer(e.target.value)}
+                placeholder="Masukkan jawaban Anda..."
+                className="w-full h-24 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300"
+              ></textarea>
+              <button
+                type="submit"
+                className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+              >
+                Submit Jawaban
+              </button>
+            </form>
           </div>
           <div className="mt-6">
             <h2 className="text-xl font-bold">Answers</h2>
@@ -230,58 +280,109 @@ const QuestionDetailPage = () => {
                   <div className="flex items-center">
                     <img
                       className="hover:cursor-pointer"
-                      src={answerVotes[answer.id]?.upvotedByUser ? upvoteClicked : upvoteUnclicked}
+                      src={
+                        answerVotes[answer.id]?.upvotedByUser
+                          ? upvoteClicked
+                          : upvoteUnclicked
+                      }
                       alt="Upvote"
-                      onClick={() => handleUpvoteClick(answer.id)}
+                      onClick={() => handleVoteClick(answer.id, "upvote")}
                     />
                     <img
                       className="hover:cursor-pointer"
-                      src={answerVotes[answer.id]?.downvotedByUser ? downvoteClicked : downvoteUnclicked}
+                      src={
+                        answerVotes[answer.id]?.downvotedByUser
+                          ? downvoteClicked
+                          : downvoteUnclicked
+                      }
                       alt="Downvote"
-                      onClick={() => handleDownvoteClick(answer.id)}
+                      onClick={() => handleVoteClick(answer.id, "downvote")}
                     />
-                    <span className="ml-2">{answerVotes[answer.id]?.votes || 0}</span>
+                    <span className="ml-2">
+                      {answerVotes[answer.id]?.votes || 0}
+                    </span>
                   </div>
                   <span className="ml-4">
-                    {formatDistanceToNow(new Date(answer.written_at), { addSuffix: true, locale: enUS })}
+                    {formatDistanceToNow(new Date(answer.written_at), {
+                      addSuffix: true,
+                      locale: enUS,
+                    })}
                   </span>
                 </div>
                 <div className="mt-4">
-                  <h3 className="text-lg font-bold">Comments</h3>
-                  {answer.comments.map((comment) => (
-                    <div
-                      key={comment.id}
-                      className="mt-2 p-2 bg-white rounded-lg"
-                    >
-                      <div className="flex items-center">
-                        <img
-                          className="w-8 h-8 rounded-full object-cover object-center"
-                          src={comment.user.profile_picture}
-                          alt="Profile"
-                        />
-                        <p className="ml-2 font-bold">
-                          {comment.user.username}
-                        </p>
-                      </div>
-                      <p className="mt-1">{comment.text}</p>
-                      <div className="mt-2 flex items-center hover:cursor-pointer" onClick={() => handleLikeClick(comment.id)}>
-                        <img
-                          src={
-                            user && commentLikes[comment.id]?.likedByUser
-                              ? liked
-                              : unliked
-                          }
-                          alt={commentLikes[comment.id]?.likedByUser ? "Liked" : "Unliked"}
-                        />
-                        <p className="mt-1 text-sm text-gray-500">
-                          {commentLikes[comment.id]?.likes}
-                        </p>
-                      </div>
-                      <p className="text-sm text-gray-500">
-                        {formatDistanceToNow(new Date(comment.written_at), { addSuffix: true, locale: enUS })}
-                      </p>
+                  <h3 className="text-lg font-bold">
+                    Comments ({answer.comments.length})
+                  </h3>
+                  <button
+                    onClick={() => toggleCommentsVisibility(answer.id)}
+                    className="text-blue-500 underline"
+                  >
+                    {visibleComments[answer.id] ? "Hide Comments" : "Show Comments"}
+                  </button>
+                  {visibleComments[answer.id] && (
+                    <div>
+                      <form onSubmit={(e) => handleSubmitComment(e, answer.id)}>
+                        <textarea
+                          value={commentTexts[answer.id] || ""}
+                          onChange={(e) => handleCommentTextChange(e, answer.id)}
+                          placeholder="Tulis komentar Anda..."
+                          className="w-full h-16 border border-gray-300 rounded-md p-2 focus:outline-none focus:ring focus:border-blue-300"
+                        ></textarea>
+                        <button
+                          type="submit"
+                          className="mt-2 bg-blue-500 text-white px-4 py-2 rounded-md hover:bg-blue-600"
+                        >
+                          Submit Komentar
+                        </button>
+                      </form>
+                      {answer.comments.map((comment) => (
+                        <div
+                          key={comment.id}
+                          className="mt-2 p-2 bg-white rounded-lg"
+                        >
+                          <div className="flex items-center">
+                            {comment.user && comment.user.profile_picture && (
+                              <img
+                                className="w-8 h-8 rounded-full object-cover object-center"
+                                src={comment.user.profile_picture}
+                                alt="Profile"
+                              />
+                            )}
+                            <p className="ml-2 font-bold">
+                              {comment.user ? comment.user.username : ""}
+                            </p>
+                          </div>
+                          <p className="mt-1">{comment.text}</p>
+                          <div
+                            className="mt-2 flex items-center hover:cursor-pointer"
+                            onClick={() => handleLikeClick(comment.id)}
+                          >
+                            <img
+                              src={
+                                user && commentLikes[comment.id]?.likedByUser
+                                  ? liked
+                                  : unliked
+                              }
+                              alt={
+                                commentLikes[comment.id]?.likedByUser
+                                  ? "Liked"
+                                  : "Unliked"
+                              }
+                            />
+                            <p className="mt-1 text-sm text-gray-500">
+                              {commentLikes[comment.id]?.likes || 0}
+                            </p>
+                          </div>
+                          <p className="text-sm text-gray-500">
+                            {formatDistanceToNow(new Date(comment.written_at), {
+                              addSuffix: true,
+                              locale: enUS,
+                            })}
+                          </p>
+                        </div>
+                      ))}
                     </div>
-                  ))}
+                  )}
                 </div>
               </div>
             ))}

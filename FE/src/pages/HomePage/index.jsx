@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useCallback } from 'react';
-import { getNewestQuestions, getSearchQuestions } from '../../request/user.request';
+import {getSearchQuestions } from '../../request/user.request';
+import { getNewestQuestions } from '../../request/question.request';
 import QuestionSummary from '../../components/QuestionSummary';
 import debounce from 'lodash.debounce';
 

@@ -1,57 +1,62 @@
-DROP TABLE IF EXISTS users CASCADE;
-DROP TABLE IF EXISTS question CASCADE;
-DROP TABLE IF EXISTS answer CASCADE;
-DROP TABLE IF EXISTS comments CASCADE;
-DROP TABLE IF EXISTS comment CASCADE;
-DROP TABLE IF EXISTS subject CASCADE;
-DROP TABLE IF EXISTS rank CASCADE;
-DROP TABLE IF EXISTS commentLike_user CASCADE;
+-- Drop existing tables if they exist
+DROP TABLE IF EXISTS commentlike_user CASCADE;
 DROP TABLE IF EXISTS vote_user CASCADE;
+DROP TABLE IF EXISTS comment CASCADE;
+DROP TABLE IF EXISTS answer CASCADE;
+DROP TABLE IF EXISTS question CASCADE;
+DROP TABLE IF EXISTS rank CASCADE;
+DROP TABLE IF EXISTS subject CASCADE;
+DROP TABLE IF EXISTS users CASCADE;
 
+-- Create the required extension
 CREATE EXTENSION IF NOT EXISTS "uuid-ossp";
 
+-- Create users table
 CREATE TABLE users (
-    user_id VARCHAR(36) PRIMARY KEY DEFAULT (gen_random_uuid()::text), 
+    user_id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     username VARCHAR UNIQUE NOT NULL,
     password VARCHAR NOT NULL,
     email VARCHAR NOT NULL,
     profile_picture VARCHAR
 );
 
-
-CREATE TABLE question (
-    id VARCHAR(36) PRIMARY KEY DEFAULT (gen_random_uuid()::text),
-    user_id VARCHAR(36) NOT NULL,
-    subject_id VARCHAR(36),
-    image VARCHAR,
-    text TEXT,
-    written_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT fk_question_user FOREIGN KEY (user_id) REFERENCES users (user_id)
-);
-
+-- Create subject table
 CREATE TABLE subject (
-    id VARCHAR(36) PRIMARY KEY DEFAULT (gen_random_uuid()::text),
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
     name VARCHAR NOT NULL UNIQUE
 );
 
-
-CREATE TABLE answer (
-    id VARCHAR(36) PRIMARY KEY DEFAULT (gen_random_uuid()::text),
-    question_id VARCHAR(36) NOT NULL,
-    user_id VARCHAR(36) NOT NULL,
-    upvote INT DEFAULT 0,
-    downvote INT DEFAULT 0,
-    text VARCHAR,
+-- Create question table
+CREATE TABLE question (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL,
+    subject_id UUID,
     image VARCHAR,
+    text TEXT,
     written_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
-    CONSTRAINT fk_answer_question FOREIGN KEY (question_id) REFERENCES question (id)
+    CONSTRAINT fk_question_user FOREIGN KEY (user_id) REFERENCES users (user_id),
+    CONSTRAINT fk_question_subject FOREIGN KEY (subject_id) REFERENCES subject (id)
 );
 
+-- Create answer table
+CREATE TABLE answer (
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    question_id UUID NOT NULL,
+    user_id UUID NOT NULL,
+    upvote INT DEFAULT 0,
+    downvote INT DEFAULT 0,
+    text TEXT,
+    image VARCHAR,
+    written_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_answer_question FOREIGN KEY (question_id) REFERENCES question (id),
+    CONSTRAINT fk_answer_user FOREIGN KEY (user_id) REFERENCES users (user_id)
+);
 
+-- Create comment table
 CREATE TABLE comment (
-    id VARCHAR(36) PRIMARY KEY DEFAULT (gen_random_uuid()::text),
-    answer_id VARCHAR(36) NOT NULL,
-    user_id VARCHAR(36) NOT NULL,
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    answer_id UUID NOT NULL,
+    user_id UUID NOT NULL,
     text TEXT,
     likes INT DEFAULT 0,
     written_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
@@ -59,34 +64,36 @@ CREATE TABLE comment (
     CONSTRAINT fk_comment_user FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
-
+-- Create rank table
 CREATE TABLE rank (
-    id VARCHAR(36) PRIMARY KEY DEFAULT (gen_random_uuid()::text),
-    user_id VARCHAR(36) NOT NULL,
-    subject_id VARCHAR(36) NOT NULL,
+    id UUID PRIMARY KEY DEFAULT uuid_generate_v4(),
+    user_id UUID NOT NULL,
+    subject_id UUID NOT NULL,
     votes INT DEFAULT 0,
     CONSTRAINT fk_rank_user FOREIGN KEY (user_id) REFERENCES users (user_id),
     CONSTRAINT fk_rank_subject FOREIGN KEY (subject_id) REFERENCES subject (id)
 );
 
-CREATE TABLE commentLike_user (
-    CONSTRAINT pk_commentLike_user PRIMARY KEY (comment_id, user_id),
-    comment_id VARCHAR(36) NOT NULL,
-    user_id VARCHAR(36) NOT NULL,
-    CONSTRAINT fk_commentLike_user_comment FOREIGN KEY (comment_id) REFERENCES comment (id),
-    CONSTRAINT fk_commentLike_user_user FOREIGN KEY (user_id) REFERENCES users (user_id)
+-- Create commentLike_user table
+CREATE TABLE commentlike_user (
+    comment_id UUID NOT NULL,
+    user_id UUID NOT NULL,
+    PRIMARY KEY (comment_id, user_id),
+    CONSTRAINT fk_commentlike_user_comment FOREIGN KEY (comment_id) REFERENCES comment (id),
+    CONSTRAINT fk_commentlike_user_user FOREIGN KEY (user_id) REFERENCES users (user_id)
 );
 
+-- Create vote_user table
 CREATE TABLE vote_user (
-    answer_id VARCHAR(36) NOT NULL,
-    user_id VARCHAR(36) NOT NULL,
+    answer_id UUID NOT NULL,
+    user_id UUID NOT NULL,
     upvote BOOLEAN,
     downvote BOOLEAN,
+    PRIMARY KEY (answer_id, user_id),
     CONSTRAINT fk_vote_user_answer FOREIGN KEY (answer_id) REFERENCES answer (id),
     CONSTRAINT fk_vote_user_user FOREIGN KEY (user_id) REFERENCES users (user_id),
     CONSTRAINT chk_vote_user CHECK ((upvote IS TRUE AND downvote IS FALSE) OR (upvote IS FALSE AND downvote IS TRUE))
 );
-
 
 -- Insert data into users table
 INSERT INTO users (username, password, email, profile_picture) VALUES
@@ -99,10 +106,9 @@ INSERT INTO subject (name) VALUES
 ('Science');
 
 -- Insert data into question table
-INSERT INTO question (user_id, subject_id, text) VALUES
-((SELECT user_id FROM users WHERE username = 'user1'), (SELECT id FROM subject WHERE name = 'Mathematics'), 'question1.jpg', 'What is 2 + 2?'),
-((SELECT user_id FROM users WHERE username = 'user2'), (SELECT id FROM subject WHERE name = 'Science'), 'question2.jpg', 'What is photosynthesis?');
-((SELECT user_id FROM users WHERE username = 'kamal'), (SELECT id FROM subject WHERE name = 'Science'), 'What is monkey ?');
+INSERT INTO question (user_id, subject_id, text, image) VALUES
+((SELECT user_id FROM users WHERE username = 'user1'), (SELECT id FROM subject WHERE name = 'Mathematics'), 'What is 2 + 2?', 'question1.jpg'),
+((SELECT user_id FROM users WHERE username = 'user2'), (SELECT id FROM subject WHERE name = 'Science'), 'What is photosynthesis?', 'question2.jpg');
 
 -- Insert data into answer table
 INSERT INTO answer (question_id, user_id, upvote, downvote, text, image) VALUES
@@ -120,7 +126,7 @@ INSERT INTO rank (user_id, subject_id, votes) VALUES
 ((SELECT user_id FROM users WHERE username = 'user2'), (SELECT id FROM subject WHERE name = 'Science'), 5);
 
 -- Insert data into commentLike_user table
-INSERT INTO commentLike_user (comment_id, user_id) VALUES
+INSERT INTO commentlike_user (comment_id, user_id) VALUES
 ((SELECT id FROM comment WHERE text = 'Great answer!'), (SELECT user_id FROM users WHERE username = 'user2')),
 ((SELECT id FROM comment WHERE text = 'Very informative.'), (SELECT user_id FROM users WHERE username = 'user1'));
 
@@ -129,6 +135,7 @@ INSERT INTO vote_user (answer_id, user_id, upvote, downvote) VALUES
 ((SELECT id FROM answer WHERE text = 'The answer is 4.'), (SELECT user_id FROM users WHERE username = 'user1'), TRUE, FALSE),
 ((SELECT id FROM answer WHERE text = 'Photosynthesis is the process by which green plants use sunlight to synthesize foods.'), (SELECT user_id FROM users WHERE username = 'user2'), TRUE, FALSE);
 
+-- Create trigger and function to update rank votes
 CREATE OR REPLACE FUNCTION update_rank_votes()
 RETURNS TRIGGER AS $$
 BEGIN

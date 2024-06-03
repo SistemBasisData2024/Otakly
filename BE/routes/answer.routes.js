@@ -7,5 +7,6 @@ router.post('/upvoteAnswer', answerController.Upvote);
 router.post('/downvoteAnswer', answerController.Downvote);
 router.post('/undownvote', answerController.Undownvote);
 router.post('/unupvote', answerController.Unupvote);
+router.post('/addAnswer', answerController.addAnswer);
 
 module.exports = router;

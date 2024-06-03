@@ -10,6 +10,7 @@ import RegisterPage from "./pages/RegisterPage"
 import ProfilePage from "./pages/ProfilePage"
 import QuestionDetailPage from "./pages/QuestionDetailPage"
 import RankPage from "./pages/RankPage"
+import PostQuestion from "./pages/PostQuestion";
 
 const router = createBrowserRouter([
   {
@@ -32,6 +33,10 @@ const router = createBrowserRouter([
         element: <ProfilePage />,
       },
       {
+        path: "/ask",
+        element: <PostQuestion />, // Add the route for PostQuestion
+      },
+      {
         path: "/question/:questionId",
         element: <QuestionDetailPage/>,
       },
@@ -45,11 +50,11 @@ const router = createBrowserRouter([
     path: "/",
     element: <Navigate to="/home" />,
   },
-])
+]);
 
 const rootElement = document.getElementById("root");
 if (rootElement) {
-  const root = ReactDOM.createRoot(rootElement); 
+  const root = ReactDOM.createRoot(rootElement);
   root.render(
     <React.StrictMode>
       <UserProvider>
