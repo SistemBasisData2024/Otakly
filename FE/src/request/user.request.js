@@ -131,3 +131,18 @@ export const getNewestQuestions = async () => {
     );
   }
 };
+
+export const getSearchQuestions = async (search) => {
+  try {
+    const response = await axios.get(`${BASE_URL}/question/searchQuestions`, {
+      params: { search }
+    });
+    return baseApiResponse(response.data.message, response.data.payload);
+  } catch (error) {
+    console.error("Error fetching data:", error);
+    return baseApiResponse(
+      "Failed to fetch data",
+      error.response ? error.response.data : null
+    );
+  }
+};

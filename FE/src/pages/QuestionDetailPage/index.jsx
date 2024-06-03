@@ -14,6 +14,8 @@ import {
   removeLike,
 } from "../../request/comment.request";
 import { CheckUserVote, Upvote, Downvote, Unupvote, Undownvote } from "../../request/answer.request";
+import { formatDistanceToNow } from "date-fns";
+import { enUS } from 'date-fns/locale';
 
 const QuestionDetailPage = () => {
   const { questionId } = useParams();
@@ -184,6 +186,8 @@ const QuestionDetailPage = () => {
     return bScore - aScore;
   });
 
+  
+
   return (
     <div className="mt-[80px] mx-5">
       {question ? (
@@ -192,11 +196,13 @@ const QuestionDetailPage = () => {
           <span className="mt-2 text-sm text-gray-500">
             Subject: {question.subject ? question.subject.name : "Subject not found"}
           </span>
-          <img
-            src={question.image}
-            alt="Question"
-            className="mt-2 max-w-full h-auto"
-          />
+          {question.image && (
+            <img
+              src={question.image}
+              alt="Question"
+              className="mt-2 max-w-full h-auto"
+            />
+          )}
           <div className="mt-4 flex items-center">
             <img
               className="w-10 h-10 rounded-full object-cover object-center"
@@ -204,8 +210,8 @@ const QuestionDetailPage = () => {
               alt="Profile"
             />
             <span className="ml-2 text-sm text-gray-500">
-              Asked by {question.user.username} on{" "}
-              {new Date(question.written_at).toLocaleDateString("en-GB")}
+              Asked by {question.user.username} {" "}
+              {formatDistanceToNow(new Date(new Date(question.written_at).toLocaleString()), { addSuffix: true, locale: enUS })}
             </span>
           </div>
           <div className="mt-6">
@@ -237,8 +243,7 @@ const QuestionDetailPage = () => {
                     <span className="ml-2">{answerVotes[answer.id]?.votes || 0}</span>
                   </div>
                   <span className="ml-4">
-                    Written on{" "}
-                    {new Date(answer.written_at).toLocaleDateString("en-GB")}
+                    {formatDistanceToNow(new Date(answer.written_at), { addSuffix: true, locale: enUS })}
                   </span>
                 </div>
                 <div className="mt-4">
@@ -273,10 +278,7 @@ const QuestionDetailPage = () => {
                         </p>
                       </div>
                       <p className="text-sm text-gray-500">
-                        Written on{" "}
-                        {new Date(comment.written_at).toLocaleDateString(
-                          "en-GB"
-                        )}
+                        {formatDistanceToNow(new Date(comment.written_at), { addSuffix: true, locale: enUS })}
                       </p>
                     </div>
                   ))}

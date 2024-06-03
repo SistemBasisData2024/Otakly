@@ -31,7 +31,7 @@ exports.getQuestionDetails = async (req, res) => {
     if (question.length === 0) {
       return res.status(404).json({ message: "Question not found" });
     }
-
+    question[0].written_at = new Date(question[0].written_at.getTime() + (7 * 60 * 60 * 1000));
     const UserOfQuestionQuery = `SELECT username, profile_picture FROM users WHERE user_id = $1`;
     const { rows: user } = await neonPool.query(UserOfQuestionQuery, [question[0].user_id]);
     question[0].user = user[0];
@@ -58,7 +58,6 @@ exports.getQuestionDetails = async (req, res) => {
       answer.comments = comments;
     }));
     question[0].answers = answers;
-
     res.status(200).json({
       message: "Question retrieved successfully",
       payload: question[0],
@@ -69,4 +68,34 @@ exports.getQuestionDetails = async (req, res) => {
   }
 }
 
+exports.getSearchQuestions = async (req, res) => {
+  try {
+    const { search } = req.query;
+    console.log('Search parameter:', search);
+    let query = `SELECT * FROM question`;
+    const values = [];
+
+    if (search) {
+      query += ` WHERE text ILIKE $1`;
+      values.push(`%${search}%`);
+    }
+
+    console.log('Query:', query);
+    console.log('Values:', values);
+
+    const { rows: questions } = await neonPool.query(query, values);
+    console.log('Questions fetched:', questions);
+
+    await Promise.all(questions.map(async (question) => {
+      const userQuery = `SELECT username, profile_picture FROM users WHERE user_id = $1`;
+      const { rows: user } = await neonPool.query(userQuery, [question.user_id]);
+      question.user = user[0];
+    }));
+
+    res.json({ message: "Questions retrieved successfully", payload: questions });
+  } catch (error) {
+    console.error('Error fetching questions:', error);
+    res.status(500).json({ message: "An error occurred", error: error.message });
+  }
+};
 

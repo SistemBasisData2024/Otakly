@@ -99,9 +99,10 @@ INSERT INTO subject (name) VALUES
 ('Science');
 
 -- Insert data into question table
-INSERT INTO question (user_id, subject_id, image, text) VALUES
+INSERT INTO question (user_id, subject_id, text) VALUES
 ((SELECT user_id FROM users WHERE username = 'user1'), (SELECT id FROM subject WHERE name = 'Mathematics'), 'question1.jpg', 'What is 2 + 2?'),
 ((SELECT user_id FROM users WHERE username = 'user2'), (SELECT id FROM subject WHERE name = 'Science'), 'question2.jpg', 'What is photosynthesis?');
+((SELECT user_id FROM users WHERE username = 'kamal'), (SELECT id FROM subject WHERE name = 'Science'), 'What is monkey ?');
 
 -- Insert data into answer table
 INSERT INTO answer (question_id, user_id, upvote, downvote, text, image) VALUES
@@ -127,3 +128,20 @@ INSERT INTO commentLike_user (comment_id, user_id) VALUES
 INSERT INTO vote_user (answer_id, user_id, upvote, downvote) VALUES
 ((SELECT id FROM answer WHERE text = 'The answer is 4.'), (SELECT user_id FROM users WHERE username = 'user1'), TRUE, FALSE),
 ((SELECT id FROM answer WHERE text = 'Photosynthesis is the process by which green plants use sunlight to synthesize foods.'), (SELECT user_id FROM users WHERE username = 'user2'), TRUE, FALSE);
+
+CREATE OR REPLACE FUNCTION update_rank_votes()
+RETURNS TRIGGER AS $$
+BEGIN
+    UPDATE rank
+    SET votes = (SELECT SUM(a.upvote - a.downvote)
+                 FROM answer a
+                 WHERE a.user_id = NEW.user_id AND a.question_id = NEW.question_id)
+    WHERE rank.user_id = NEW.user_id AND rank.subject_id = (SELECT subject_id FROM question WHERE id = NEW.question_id);
+    RETURN NEW;
+END;
+$$ LANGUAGE plpgsql;
+
+CREATE TRIGGER trigger_update_votes
+AFTER INSERT OR UPDATE OF upvote, downvote ON answer
+FOR EACH ROW
+EXECUTE FUNCTION update_rank_votes();

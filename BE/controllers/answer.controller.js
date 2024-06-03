@@ -32,14 +32,6 @@ exports.Upvote = async (req, res) => {
         const updateAnswerQuery = `UPDATE answer SET upvote = upvote + 1 WHERE id = $1 RETURNING *`;
         const { rows: answer } = await neonPool.query(updateAnswerQuery, [answer_id]);
 
-        const updateRankQuery = `
-            UPDATE rank 
-            SET votes = votes + 1 
-            WHERE user_id = $1 AND subject_id = (
-                SELECT subject_id FROM answer WHERE id = $2
-            ) RETURNING *`;
-        await neonPool.query(updateRankQuery, [user_id, answer_id]);
-
         res.status(201).json({
             message: "Upvoted successfully",
             payload: answer[0]
@@ -49,7 +41,6 @@ exports.Upvote = async (req, res) => {
         res.status(500).json({ message: "An error occurred", error });
     }
 }
-
 
 exports.Downvote = async (req, res) => {
     const { user_id, answer_id } = req.body;
@@ -67,14 +58,6 @@ exports.Downvote = async (req, res) => {
 
         const updateAnswerQuery = `UPDATE answer SET downvote = downvote + 1 WHERE id = $1 RETURNING *`;
         const { rows: answer } = await neonPool.query(updateAnswerQuery, [answer_id]);
-
-        const updateRankQuery = `
-            UPDATE rank 
-            SET votes = votes - 1 
-            WHERE user_id = $1 AND subject_id = (
-                SELECT subject_id FROM answer WHERE id = $2
-            ) RETURNING *`;
-        await neonPool.query(updateRankQuery, [user_id, answer_id]);
 
         res.status(201).json({
             message: "Downvoted successfully",
@@ -95,14 +78,6 @@ exports.Unupvote = async (req, res) => {
         if (deletedVote.length > 0) {
             const updateAnswerQuery = `UPDATE answer SET upvote = upvote - 1 WHERE id = $1 RETURNING *`;
             const { rows: answer } = await neonPool.query(updateAnswerQuery, [answer_id]);
-
-            const updateRankQuery = `
-                UPDATE rank 
-                SET votes = votes - 1 
-                WHERE user_id = $1 AND subject_id = (
-                    SELECT subject_id FROM answer WHERE id = $2
-                ) RETURNING *`;
-            await neonPool.query(updateRankQuery, [user_id, answer_id]);
 
             res.status(200).json({
                 message: "Upvote removed successfully",
@@ -126,14 +101,6 @@ exports.Undownvote = async (req, res) => {
         if (deletedVote.length > 0) {
             const updateAnswerQuery = `UPDATE answer SET downvote = downvote + 1 WHERE id = $1 RETURNING *`;
             const { rows: answer } = await neonPool.query(updateAnswerQuery, [answer_id]);
-
-            const updateRankQuery = `
-                UPDATE rank 
-                SET votes = votes + 1 
-                WHERE user_id = $1 AND subject_id = (
-                    SELECT subject_id FROM answer WHERE id = $2
-                ) RETURNING *`;
-            await neonPool.query(updateRankQuery, [user_id, answer_id]);
 
             res.status(200).json({
                 message: "Downvote removed successfully",

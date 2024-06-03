@@ -59,13 +59,19 @@ const Navbar = () => {
         <ul className="text-sm lg:flex-grow">
           <li
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 hover:cursor-pointer"
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false);
+              navigate("/ask");
+            }}
           >
             Ask
           </li>
           <li
             className="block mt-4 lg:inline-block lg:mt-0 text-gray-200 hover:text-white mr-4 hover:cursor-pointer"
-            onClick={() => setIsOpen(false)}
+            onClick={() => {
+              setIsOpen(false);
+              navigate("/rank");
+            }}
           >
             Ranks
           </li>
