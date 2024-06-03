@@ -1,3 +1,5 @@
+// request/question.request.js
+
 import axios from "axios";
 
 const baseApiResponse = (message, payload) => {
@@ -8,6 +10,23 @@ const BASE_URL =
   process.env.NODE_ENV === "production"
     ? "https://localhost:5000"
     : "http://localhost:5000";
+
+export const postQuestion = async (questionData) => {
+  try {
+    const response = await axios.post(
+      `${BASE_URL}/question/postQuestion`,
+      questionData, // Convert URLSearchParams to string
+      { headers: { "Content-Type": "application/json" } }
+    );
+    return baseApiResponse(response.data.message, response.data.payload);
+  } catch (error) {
+    console.error("Error posting question:", error);
+    return baseApiResponse(
+      "Gagal memposting pertanyaan",
+      error.response ? error.response.data : null
+    );
+  }
+};
 
 export const getNewestQuestions = async () => {
   try {
