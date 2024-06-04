@@ -50,10 +50,10 @@ const PostQuestion = () => {
           <option value="Economy">Economy</option>
           <option value="Geology">Geology</option>
         </select>
-        <input
+        <textarea
           type="text"
           placeholder="Question text"
-          className="w-64 p-2 mb-4 border border-gray-300 rounded-md"
+          className="w-[80vw] p-2 mb-4 border border-gray-300 rounded-md"
           value={questionText}
           onChange={(e) => setQuestionText(e.target.value)}
         />

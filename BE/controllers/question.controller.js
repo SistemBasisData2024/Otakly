@@ -5,14 +5,21 @@ exports.getNewestQuestions = async (req, res) => {
   try {
     const query = `SELECT * FROM question ORDER BY written_at DESC LIMIT 20`;
     const { rows: questions } = await neonPool.query(query);
-
+    questions.forEach((question) => {
+        question.written_at = new Date(
+          question.written_at.getTime() + 7 * 60 * 60 * 1000
+        );
+    });
     await Promise.all(
       questions.map(async (question) => {
-        const query = `SELECT username, profile_picture FROM users WHERE user_id = $1`;
-        const { rows: user } = await neonPool.query(query, [question.user_id]);
+        const userQuery = `SELECT username, profile_picture FROM users WHERE user_id = $1`;
+        const { rows: user } = await neonPool.query(userQuery, [
+          question.user_id,
+        ]);
         question.user = user[0];
       })
     );
+
     res.status(200).json({
       message: "Questions retrieved successfully",
       payload: questions,
