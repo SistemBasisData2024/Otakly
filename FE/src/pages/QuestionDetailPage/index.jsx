@@ -241,7 +241,7 @@ const QuestionDetailPage = () => {
             <img
               src={question.image}
               alt="Question"
-              className="mt-2 max-w-full h-auto"
+              className="mt-2 max-w-full h-auto rounded-md"
             />
           )}
           <div className="mt-4 flex items-center">
@@ -288,7 +288,7 @@ const QuestionDetailPage = () => {
                   <img
                     src={answer.image}
                     alt="Answer"
-                    className="mt-2 max-w-full h-auto"
+                    className="mt-2 max-w-full h-auto rounded-md"
                   />
                 )}
                 <div className="mt-2 text-sm text-gray-500">
