@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import {useParams } from "react-router-dom";
+import { useParams } from "react-router-dom";
 import defaultProfilePicture from "../../assets/default_propic.jpg";
 import axios from "axios";
 import { getQuestionDetails } from "../../request/question.request";
@@ -283,6 +283,7 @@ const QuestionDetailPage = () => {
             {sortedAnswers.map((answer) => (
               <div key={answer.id} className="mt-4 p-4 bg-gray-100 rounded-lg">
                 <p>{answer.text}</p>
+                {console.log(answer)}
                 {answer.image && (
                   <img
                     src={answer.image}
@@ -316,12 +317,19 @@ const QuestionDetailPage = () => {
                       {answerVotes[answer.id]?.votes || 0}
                     </span>
                   </div>
-                  <span className="ml-4">
-                    {formatDistanceToNow(new Date(answer.written_at), {
-                      addSuffix: true,
-                      locale: enUS,
-                    })}
-                  </span>
+                  <div className="flex items-center mt-2">
+                    <img
+                      src={answer.user.profile_picture || defaultProfilePicture}
+                      className="w-8 h-8 rounded-full object-cover object-center"
+                      alt="Profile"
+                    />
+                    <span className="ml-4">
+                      {formatDistanceToNow(new Date(answer.written_at), {
+                        addSuffix: true,
+                        locale: enUS,
+                      })}
+                    </span>
+                  </div>
                 </div>
                 <div className="mt-4">
                   <h3 className="text-lg font-bold">

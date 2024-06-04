@@ -93,41 +93,6 @@ CREATE TABLE vote_user (
     CONSTRAINT chk_vote_user CHECK ((upvote IS TRUE AND downvote IS FALSE) OR (upvote IS FALSE AND downvote IS TRUE))
 );
 
--- Insert data into users table
-INSERT INTO users (username, password, email, profile_picture) VALUES
-('user1', 'password1', 'user1@example.com', 'profile1.jpg'),
-('user2', 'password2', 'user2@example.com', 'profile2.jpg');
-
--- Insert data into question table
-INSERT INTO question (user_id, subject, text, image) VALUES
-((SELECT user_id FROM users WHERE username = 'user1'), 'Math', 'What is 2 + 2?', 'question1.jpg'),
-((SELECT user_id FROM users WHERE username = 'user2'), 'Biology', 'What is photosynthesis?', 'question2.jpg');
-
--- Insert data into answer table
-INSERT INTO answer (question_id, user_id, upvote, downvote, text, image) VALUES
-((SELECT id FROM question WHERE text = 'What is 2 + 2?'), (SELECT user_id FROM users WHERE username = 'user2'), 10, 2, 'The answer is 4.', 'answer1.jpg'),
-((SELECT id FROM question WHERE text = 'What is photosynthesis?'), (SELECT user_id FROM users WHERE username = 'user1'), 5, 1, 'Photosynthesis is the process by which green plants use sunlight to synthesize foods.', 'answer2.jpg');
-
--- Insert data into comment table
-INSERT INTO comment (answer_id, user_id, text, likes) VALUES
-((SELECT id FROM answer WHERE text = 'The answer is 4.'), (SELECT user_id FROM users WHERE username = 'user1'), 'Great answer!', 3),
-((SELECT id FROM answer WHERE text = 'Photosynthesis is the process by which green plants use sunlight to synthesize foods.'), (SELECT user_id FROM users WHERE username = 'user2'), 'Very informative.', 2);
-
--- Insert data into rank table
-INSERT INTO rank (user_id, subject, votes) VALUES
-((SELECT user_id FROM users WHERE username = 'user1'), 'Math', 10),
-((SELECT user_id FROM users WHERE username = 'user2'), 'Biology', 5);
-
--- Insert data into commentlike_user table
-INSERT INTO commentlike_user (comment_id, user_id) VALUES
-((SELECT id FROM comment WHERE text = 'Great answer!'), (SELECT user_id FROM users WHERE username = 'user2')),
-((SELECT id FROM comment WHERE text = 'Very informative.'), (SELECT user_id FROM users WHERE username = 'user1'));
-
--- Insert data into vote_user table
-INSERT INTO vote_user (answer_id, user_id, upvote, downvote) VALUES
-((SELECT id FROM answer WHERE text = 'The answer is 4.'), (SELECT user_id FROM users WHERE username = 'user1'), TRUE, FALSE),
-((SELECT id FROM answer WHERE text = 'Photosynthesis is the process by which green plants use sunlight to synthesize foods.'), (SELECT user_id FROM users WHERE username = 'user2'), TRUE, FALSE);
-
 -- Create trigger and function to update rank votes
 CREATE OR REPLACE FUNCTION update_rank_votes()
 RETURNS TRIGGER AS $$

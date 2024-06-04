@@ -185,15 +185,21 @@ exports.createAnswer = async (req, res) => {
 };
 
 exports.addAnswer = async (req, res) => {
-  const { user_id, question_id, text } = req.body;
+  const { user_id, question_id, text, image} = req.body;
   try {
-    const query = `INSERT INTO answer(user_id, question_id, text) VALUES($1, $2, $3) RETURNING *`;
+    if (!user_id || !question_id || !text) {
+      return res.status(400).json({
+        message: "Mohon lengkapi data yang diperlukan",
+      });
+    }
+    const query = `INSERT INTO answer(user_id, question_id, text, image) VALUES($1, $2, $3, $4) RETURNING *`;
     const { rows: answer } = await neonPool.query(query, [
       user_id,
       question_id,
       text,
+      image
     ]);
-    const checkRankQuery = `SELECT * FROM rank WHERE user_id = $1 AND subject = (SELECT subject FROM answer WHERE question_id = $2)`;
+    const checkRankQuery = `SELECT * FROM rank WHERE user_id = $1 AND subject = (SELECT subject FROM question WHERE id = $2)`;
     const { rows: existingRank } = await neonPool.query(checkRankQuery, [
       user_id,
       question_id,
