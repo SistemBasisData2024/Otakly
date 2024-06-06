@@ -75,3 +75,19 @@ exports.isLiked = async (req, res) => {
         res.status(500).json({ message: "An error occurred", error });
     }
 }
+
+// controllers/comment.controller.js
+exports.addComment = async (req, res) => {
+    const { user_id, answer_id, text } = req.body;
+    try {
+        const query = `INSERT INTO comment(user_id, answer_id, text) VALUES($1, $2, $3) RETURNING *`;
+        const { rows: comment } = await neonPool.query(query, [user_id, answer_id, text]);
+        res.status(201).json({
+            message: "Comment added successfully",
+            payload: comment[0]
+        });
+    } catch (error) {
+        console.error(error);
+        res.status(500).json({ message: "An error occurred", error });
+    }
+};
