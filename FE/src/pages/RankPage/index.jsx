@@ -8,7 +8,7 @@ const RankPage = () => {
         const getLeaderboard = async () => {
             try {
                 const data = await fetchLeaderboard();
-                console.log('Fetched Data:', data); // Debugging: Log fetched data
+                console.log('Fetched Data:', data);
                 if (data && data.topLeaderboard) {
                     setLeaderboard(data.topLeaderboard);
                 } else {

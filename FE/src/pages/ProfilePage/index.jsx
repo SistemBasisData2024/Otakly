@@ -108,6 +108,16 @@ const ProfilePage = () => {
     }
   };
 
+  const logoutHandler = async (e) => {
+    e.preventDefault();
+    try {
+      setUser(null);
+      navigate("/home");
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
   return (
     <div className="flex flex-col sm:flex-row justify-center items-center h-screen ">
       <div className="bg-white shadow-sm p-4 rounded-md m-3 sm:mt-0 mt-[200px]">
@@ -232,6 +242,15 @@ const ProfilePage = () => {
               </button>
             </form>
           )}
+        </div>
+
+        <div className="mb-4">
+          <button
+            onClick={logoutHandler}
+            className="bg-red-500 text-white py-2 px-4 rounded-md hover:bg-red-600 mt-4"
+          >
+          Log Out
+          </button>
         </div>
       </div>
     </div>
