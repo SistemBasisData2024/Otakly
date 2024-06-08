@@ -24,12 +24,12 @@ const UploadWidget = ({ onImageUpload }) => {
 
   return (
     <>
-      <button
+      <div
         onClick={() => widgetRef.current.open()}
-        className="bg-[#C2855F] hover:bg-[#9e6c4e] text-white font-bold py-2 px-4 rounded"
+        className="flex bg-[#C2855F] hover:bg-[#9e6c4e] text-white font-bold py-2 px-4 rounded justify-center items-center hover:cursor-pointer"
       >
         Upload Image
-      </button>
+      </div>
       {imageUrl && (
         <div>
           <img src={imageUrl} alt="Uploaded" style={{ width: '100px', height: 'auto' }} />

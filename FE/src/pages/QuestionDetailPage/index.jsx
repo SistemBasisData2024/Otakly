@@ -121,9 +121,14 @@ const QuestionDetailPage = () => {
     }
   };
 
-  const handleVoteClick = async (answerId, type) => {
+  const handleVoteClick = async (answer, type) => {
     if (!user) {
       alert("Please log in to vote.");
+      return;
+    }
+
+    if(user.user_id == answer.user_id){
+      alert("You can't vote your own answer")
       return;
     }
 
@@ -135,7 +140,7 @@ const QuestionDetailPage = () => {
           await Upvote(user.user_id, answerId);
         }
       } else if (type === "downvote") {
-        if (answerVotes[answerId].downvotedByUser) {
+        if (answerVotes[answer.id].downvotedByUser) {
           await Undownvote(user.user_id, answerId);
         } else {
           await Downvote(user.user_id, answerId);
@@ -152,6 +157,11 @@ const QuestionDetailPage = () => {
 
     if (!user) {
       alert("Silakan login untuk mengirim jawaban.");
+      return;
+    }
+
+    if(user.user_id == question.user_id){
+      alert("You can't answer your own question")
       return;
     }
 
@@ -230,9 +240,9 @@ const QuestionDetailPage = () => {
   };
 
   return (
-    <div className="mt-[80px] mx-5">
+    <div className="">
       {question ? (
-        <div className="p-6 bg-gray-50 rounded-lg shadow-lg">
+        <div className="p-6 bg-gray-50 rounded-lg shadow-lg mt-[80px] mx-5">
           <h1 className="text-2xl font-bold">{question.text}</h1>
           <span className="mt-2 text-sm text-gray-500">
             Subject: {question.subject ? question.subject : "Subject not found"}
@@ -301,7 +311,7 @@ const QuestionDetailPage = () => {
                           : upvoteUnclicked
                       }
                       alt="Upvote"
-                      onClick={() => handleVoteClick(answer.id, "upvote")}
+                      onClick={() => handleVoteClick(answer, "upvote")}
                     />
                     <img
                       className="hover:cursor-pointer"
@@ -311,7 +321,7 @@ const QuestionDetailPage = () => {
                           : downvoteUnclicked
                       }
                       alt="Downvote"
-                      onClick={() => handleVoteClick(answer.id, "downvote")}
+                      onClick={() => handleVoteClick(answer, "downvote")}
                     />
                     <span className="ml-2">
                       {answerVotes[answer.id]?.votes || 0}
@@ -418,7 +428,9 @@ const QuestionDetailPage = () => {
           </div>
         </div>
       ) : (
-        <p>Loading...</p>
+        <div className="flex justify-center items-center h-screen">
+          <p className="text-2xl font-bold animate-pulse text-white">Loading...</p>
+        </div>
       )}
     </div>
   );
