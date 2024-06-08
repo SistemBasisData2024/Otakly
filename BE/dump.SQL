@@ -1,3 +1,11 @@
+--clear all data in all tables
+TRUNCATE TABLE commentlike_user CASCADE;
+TRUNCATE TABLE vote_user CASCADE;
+TRUNCATE TABLE comment CASCADE;
+TRUNCATE TABLE answer CASCADE;
+TRUNCATE TABLE question CASCADE;
+TRUNCATE TABLE rank CASCADE;
+
 -- Drop existing tables if they exist
 DROP TABLE IF EXISTS commentlike_user CASCADE;
 DROP TABLE IF EXISTS vote_user CASCADE;
